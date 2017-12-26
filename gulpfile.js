@@ -52,7 +52,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("jsminify", function() {
-  return gulp.src("js/*.js")
+  return gulp.src("js/script.js")
   .pipe(jsminify())
   .pipe(rename({suffix: ".min"}))
   .pipe(gulp.dest("build/js"));
@@ -102,7 +102,6 @@ gulp.task("serve", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-    "css/normalize.css",
     "fonts/**/*.{woff,woff2}",
     "img/**",
     "js/**"
@@ -124,29 +123,6 @@ gulp.task("build", function(done) {
     "sprite",
     "html",
     "js",
-    done
-  );
-});
-
-gulp.task("clean-docs", function() {
-  return del([
-    "docs/css/**",
-    "docs/fonts/**",
-    "docs/js/**",
-    "docs/img/**",
-    "docs/*.html"
-  ])
-});
-
-gulp.task("copy-docs", function() {
-  return gulp.src("build/**")
-  .pipe(gulp.dest("docs"));
-});
-
-gulp.task("docs", function(done) {
-  run(
-    "clean-docs",
-    "copy-docs",
     done
   );
 });

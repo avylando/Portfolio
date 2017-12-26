@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__item {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+}
+
+.menu__link {
+
+}

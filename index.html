@@ -6,104 +6,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My portfolio</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__wrapper">
-      <div class="page-header__logo">
 
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header__wrapper">
+        <div class="page-header__logo">
+
+        </div>
+        <nav class="page-header__nav">
+          <ul class="page-header__menu menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Мои работы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Обо мне</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="page-header__nav">
-        <ul class="page-header__menu menu">
-          <li class="menu__item">
-            <a href="#">Мои работы</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Обо мне</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </header>
 
-  <main>
+  <div class="parallax">
 
-    <section class="portfolio">
-
-      <div class="swiper-container gallery-top">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt=""></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next swiper-button-black"></div>
-        <div class="swiper-button-prev swiper-button-black"></div>
+    <main>
+      <div class="parallax__group">
+        <div class="poster parallax__layer parallax__layer--back"></div>
       </div>
-      <div class="swiper-container gallery-thumbs">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt="" style="width: 100px; height: 40px"></div>
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt="" style="width: 100px; height: 40px"></div>
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt="" style="width: 100px; height: 40px"></div>
-          <div class="swiper-slide"><img src="img/hero-desktop@1x.jpg" alt="" style="width: 100px; height: 40px"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-        </div>
+
+      <div class="container">
+        <!-- <div class="parallax__layer parallax__layer--back"></div>
+        <div class="parallax__layer parallax__layer--base"></div> -->
+
+
+
+        <section class="portfolio parallax__group">
+          <div class="parallax__layer parallax__layer--base"></div>
+          <div class="portfolio__wrapper">
+
+            <ul class="pgwSlider">
+              <li>
+                <a href="https://avylando.github.io/Mishka/" target="_blank">
+                  <img src="img/mishka-preview.jpg" data-large-src="img/mishka-preview.jpg">
+                </a>
+              </li>
+              <li>
+                <a href="https://avylando.github.io/Pink/" target="_blank">
+                  <img src="img/pink-preview.jpg" data-large-src="img/pink-preview.jpg">
+                </a>
+              </li>
+              <li>
+                <img src="img/sedona-preview.jpg" data-large-src="img/sedona-preview.jpg">
+                <!-- <span>Shanghai, China</span> -->
+              </li>
+              <li>
+                <a href="https://avylando.github.io/Keksobooking/" target="_blank">
+                  <img src="img/keksobooking-preview.jpg" data-large-src="img/keksobooking-preview.jpg">
+                  <!-- <span>KEKSOBOOKING</span> -->
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <img src="img/kekstagram-preview.jpg" data-large-src="img/kekstagram-preview.jpg">
+                  <!-- <span>KEKSTAGRAM</span> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="about-me parallax__group">
+          <div class="parallax__layer parallax__layer--back"></div>
+          <div class="parallax__layer parallax__layer--base"></div>
+          <div class="about-me__wrapper">
+            <div class="about-me__column">
+              <h1>Lorem ipsum dolor</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
+                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
+                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
+                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+            </div>
+            <div class="about-me__column">
+              <h1>Lorem ipsum dolor</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
+                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
+                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
+                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+            </div>
+            <div class="about-me__column">
+              <h1>Lorem ipsum dolor</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
+                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
+                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
+                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="feedback parallax__group">
+          <div class="parallax__layer parallax__layer--back"></div>
+          <div class="parallax__layer parallax__layer--base"></div>
+        </section>
+
       </div>
-    </section>
+    </main>
 
-    <section class="about-me">
+    <footer class="page-footer">
+      <!-- <div class="parallax__layer parallax__layer--back"></div>
+      <div class="parallax__layer parallax__layer--base"></div> -->
+      <div class="container">
 
-    </section>
+      </div>
+    </footer>
 
-    <section class="feedback">
+  </div>
 
-    </section>
-  </main>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/pgwslider.min.js"></script>
 
-  <footer class="page-footer">
-
-  </footer>
-
-
-  <script src="js/swiper.min.js"></script>
-   <script src="js/swiper.js"></script>
   <script>
-    var galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
-      loop: true,
-      loopedSlides: 5, //looped slides should be the same
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+    var pgwSlider = $('.pgwSlider').pgwSlider();
+    $(document).ready(function () {
+      pgwSlider;
     });
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      touchRatio: 0.2,
-      loop: true,
-      loopedSlides: 5, //looped slides should be the same
-      slideToClickedSlide: true,
-    });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
-
-    var swiperSlides = document.querySelectorAll('.gallery-top .swiper-slide');
-
-    // swiperSlides.forEach(function(slide) {
-    //   slide.style.width = '300px';
-    //   slide.style.height = '150px';
-    // })
+    pgwSlider.reload({
+      maxHeight: 700,
+      // autoSlide: false,
+      displayControls: true,
+      displayList: false,
+      verticalCentering: true,
+      intervalDuration: 3000
+    })
   </script>
 </body>
 

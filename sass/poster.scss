@@ -1,0 +1,20 @@
+.poster {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/water-drops.jpg');
+  // background-size: 175%;
+  background-repeat: no-repeat;
+  filter: opacity(0.3);
+}
+
+// .poster__portrait {
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 50%;
+//   margin: auto;
+//   background-color: #f44242;
+//   background-image: url('../img/portrait.jpg');
+//   background-position: 75% 50%;
+
+// }
