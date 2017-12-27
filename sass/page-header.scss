@@ -2,10 +2,21 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: rgba(226, 83, 83, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .page-header__wrapper {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-header__nav {
+  width: 80%;
+}
+
+.page-header__localisation {
+  width: 5%;
 }

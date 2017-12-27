@@ -58,17 +58,17 @@ gulp.task("jsminify", function() {
   .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("clean-js", function() {
-  return del("build/js/*.min.js");
-})
+// gulp.task("clean-js", function() {
+//   return del("build/js/*.min.js");
+// })
 
-gulp.task("js", function(done) {
-  run(
-    "clean-js",
-    "jsminify",
-    done
-  );
-})
+// gulp.task("js", function(done) {
+//   run(
+//     "clean-js",
+//     "jsminify",
+//     done
+//   );
+// })
 
 gulp.task("imagemin", function() {
   return gulp.src("img/**/*.{png,jpg,svg}")
@@ -122,7 +122,7 @@ gulp.task("build", function(done) {
     "style",
     "sprite",
     "html",
-    "js",
+    // "js",
     done
   );
 });

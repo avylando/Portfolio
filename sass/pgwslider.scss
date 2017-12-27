@@ -7,7 +7,7 @@
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
  .pgwSlider {
-  width: 60%;
+  width: 100%;
   color: #fff;
 
   // &:hover {
@@ -33,6 +33,7 @@
   height: inherit;
   position: relative;
   font-size: 1rem;
+  border-radius: 10px;
 }
 
 .pgwSlider.listOnTheLeft .ps-current {

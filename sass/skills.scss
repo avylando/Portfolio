@@ -1,0 +1,14 @@
+.skills {
+  padding-top: 300px;
+  background-image: linear-gradient(to bottom, #e8e8e8 0%, #f8ffdd 100%);
+}
+
+.skills__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skills__column {
+  width: 30%;
+}

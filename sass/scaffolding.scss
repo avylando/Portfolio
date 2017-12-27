@@ -36,7 +36,6 @@ body {
   line-height: 24px;
   color: #282727;
   min-width: 320px;
-  margin: 0;
 }
 
 *,
@@ -57,8 +56,8 @@ a {
 
 .container {
   min-width: 320px;
-  max-width: 960px;
+  // max-width: 960px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }

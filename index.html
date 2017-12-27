@@ -11,6 +11,10 @@
 
 <body>
 
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper">
@@ -30,6 +34,11 @@
             </li>
           </ul>
         </nav>
+        <div class="page-header__localisation">
+          <svg class="page-header__uk-icon" width='25' height='13'>
+            <use xlink:href='#icon-uk'></use>
+          </svg>
+        </div>
       </div>
     </div>
   </header>
@@ -37,97 +46,133 @@
   <div class="parallax">
 
     <main>
-      <div class="parallax__group">
+
+      <section id="group-1" class="hello parallax__group">
+        <!-- <div class="parallax__layer parallax__layer--base"> -->
+        <div class="hello__filter"></div>
+        <div class="hello__banner">
+          <h1 class="hello__title">Анатолий Долгов</h1>
+          <p class="hello__text">Верстка сайтов. HTML, CSS, JavaScript</p>
+        </div>
+        <!-- </div> -->
+      </section>
+
+      <section id="group-2" class="skills parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container">
+            <div class="skills__wrapper">
+              <div class="skills__column">
+                <h2>Ответственность</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est
+                  porttitor a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero
+                  vestibulum porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis
+                  magna quis quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+              </div>
+              <div class="skills__column">
+                <h2>Качество исполнения</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est
+                  porttitor a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero
+                  vestibulum porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis
+                  magna quis quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+              </div>
+              <div class="skills__column">
+                <h2>Доброжелательность</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est
+                  porttitor a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero
+                  vestibulum porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis
+                  magna quis quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+              </div>
+            </div>
+          </div>
+          <div class="poster poster--top parallax__layer parallax__layer--back"></div>
+        </div>
+
+      </section>
+
+      <section id="group-3" class="portfolio parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container">
+            <div class="portfolio__wrapper">
+              <div class="portfolio__text">
+                <h1 class="portfolio__title">Мои проекты</h1>
+                <p class="portfolio__description">
+                  В своей работе я использую следующие инструменты
+                </p>
+              </div>
+              <div class="portfolio__slider">
+                <ul class="pgwSlider">
+                  <li>
+                    <a href="https://avylando.github.io/Mishka/" target="_blank">
+                      <img src="img/mishka-preview.jpg" data-large-src="img/mishka-preview.jpg">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://avylando.github.io/Pink/" target="_blank">
+                      <img src="img/pink-preview.jpg" data-large-src="img/pink-preview.jpg">
+                    </a>
+                  </li>
+                  <li>
+                    <img src="img/sedona-preview.jpg" data-large-src="img/sedona-preview.jpg">
+                    <!-- <span>Shanghai, China</span> -->
+                  </li>
+                  <li>
+                    <a href="https://avylando.github.io/Keksobooking/" target="_blank">
+                      <img src="img/keksobooking-preview.jpg" data-large-src="img/keksobooking-preview.jpg">
+                      <!-- <span>KEKSOBOOKING</span> -->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <img src="img/kekstagram-preview.jpg" data-large-src="img/kekstagram-preview.jpg">
+                      <!-- <span>KEKSTAGRAM</span> -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="group-4" class="about-me parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container">
+            <div class="about-me__wrapper">
+              <div class="about-me__illustration"></div>
+              <div class="about-me__bio">
+                <h2 class="about-me__title">Немного обо мне</h2>
+                <ul class="about-me__list">
+                  <li class="about-me__item">Возраст: 26 лет</li>
+                  <li class="about-me__item">Местонахождение: г. Челябинск</li>
+                  <li class="about-me__item">Образование: высшее (ЮУрГУ, 2013 год)</li>
+                  <li class="about-me__item">В сфере веб-разработки проходил обучение в <a href='https://htmlacademy.ru/profile/dolgov_anatoly'>HTML-Academy</a></li>
+                  <li class="about-me__item">Основные увлечения: Футбол, IT, музыка</li>
+                  <li class="about-me__item">Своими главными качествами считаю честность и ответственность, не только в работе, но и в жизни</li>
+                </ul>
+                <button class="about-me__button">Написать мне</button>
+                <!-- <p class="about-me__text"></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="poster parallax__layer parallax__layer--back"></div>
-      </div>
+      </section>
 
-      <div class="container">
-        <!-- <div class="parallax__layer parallax__layer--back"></div>
-        <div class="parallax__layer parallax__layer--base"></div> -->
-
-
-
-        <section class="portfolio parallax__group">
-          <div class="parallax__layer parallax__layer--base"></div>
-          <div class="portfolio__wrapper">
-
-            <ul class="pgwSlider">
-              <li>
-                <a href="https://avylando.github.io/Mishka/" target="_blank">
-                  <img src="img/mishka-preview.jpg" data-large-src="img/mishka-preview.jpg">
-                </a>
-              </li>
-              <li>
-                <a href="https://avylando.github.io/Pink/" target="_blank">
-                  <img src="img/pink-preview.jpg" data-large-src="img/pink-preview.jpg">
-                </a>
-              </li>
-              <li>
-                <img src="img/sedona-preview.jpg" data-large-src="img/sedona-preview.jpg">
-                <!-- <span>Shanghai, China</span> -->
-              </li>
-              <li>
-                <a href="https://avylando.github.io/Keksobooking/" target="_blank">
-                  <img src="img/keksobooking-preview.jpg" data-large-src="img/keksobooking-preview.jpg">
-                  <!-- <span>KEKSOBOOKING</span> -->
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank">
-                  <img src="img/kekstagram-preview.jpg" data-large-src="img/kekstagram-preview.jpg">
-                  <!-- <span>KEKSTAGRAM</span> -->
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </section>
-
-        <section class="about-me parallax__group">
-          <div class="parallax__layer parallax__layer--back"></div>
-          <div class="parallax__layer parallax__layer--base"></div>
-          <div class="about-me__wrapper">
-            <div class="about-me__column">
-              <h1>Lorem ipsum dolor</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
-                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
-                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
-                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
-            </div>
-            <div class="about-me__column">
-              <h1>Lorem ipsum dolor</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
-                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
-                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
-                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
-            </div>
-            <div class="about-me__column">
-              <h1>Lorem ipsum dolor</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
-                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
-                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
-                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="feedback parallax__group">
-          <div class="parallax__layer parallax__layer--back"></div>
-          <div class="parallax__layer parallax__layer--base"></div>
-        </section>
-
-      </div>
     </main>
 
     <footer class="page-footer">
-      <!-- <div class="parallax__layer parallax__layer--back"></div>
-      <div class="parallax__layer parallax__layer--base"></div> -->
-      <div class="container">
+      <div id="group-5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container">
 
+          </div>
+        </div>
       </div>
+
     </footer>
 
   </div>
@@ -135,17 +180,17 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/pgwslider.min.js"></script>
 
-  <script>
+  <script defer>
     var pgwSlider = $('.pgwSlider').pgwSlider();
     $(document).ready(function () {
       pgwSlider;
     });
     pgwSlider.reload({
-      maxHeight: 700,
+      maxHeight: 600,
       // autoSlide: false,
       displayControls: true,
       displayList: false,
-      verticalCentering: true,
+      // verticalCentering: true,
       intervalDuration: 3000
     })
   </script>
