@@ -70,6 +70,27 @@ gulp.task("jsminify", function() {
 //   );
 // })
 
+gulp.task("clean-js", function() {
+  return del("build/js/*.js");
+})
+
+gulp.task("copy-js", function() {
+  return gulp.src([
+    "js/**"
+  ], {
+    base:"."
+  })
+  .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function(done) {
+  run(
+    "clean-js",
+    "copy-js",
+    done
+  );
+})
+
 gulp.task("imagemin", function() {
   return gulp.src("img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
@@ -110,6 +131,7 @@ gulp.task("copy", function() {
   })
   .pipe(gulp.dest("build"));
 });
+
 
 gulp.task("clean", function() {
   return del("build");

@@ -1,12 +1,25 @@
 .portfolio {
   padding-top: 300px;
   background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
+  overflow-x: hidden;
 }
 
 .portfolio__wrapper {
   display: flex;
   justify-content: space-between;
+  transform: translateX(-3000px);
 }
+
+.portfolio--show {
+  transform: translateX(0);
+  transition: transform 2s;
+}
+
+.portfolio--hide {
+  transform: translateX(-3000px);
+  transition: transform 0.2s;
+}
+
 
 .portfolio__slider {
   width: 65%;
