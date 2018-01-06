@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-  console.log('sss');
   var skillsSection = $('.skills__wrapper');
   var sliderSection = $('.portfolio__wrapper');
   var aboutMeSection = $('.about-me__wrapper');
