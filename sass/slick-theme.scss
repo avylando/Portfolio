@@ -7,9 +7,9 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-font-path: "./fonts/" !default;
+$slick-font-path: "../fonts/" !default;
 $slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
+$slick-loader-path: "../img/" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -43,7 +43,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+        background: #fff slick-image-url("../img/ajax-loader.gif") center center no-repeat;
     }
 }
 
@@ -51,8 +51,8 @@ $slick-opacity-not-active: 0.25 !default;
 @if $slick-font-family == "slick" {
     @font-face {
         font-family: "slick";
-        src: slick-font-url("slick.eot");
-        src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
+        src: slick-font-url("../fonts/slick.eot");
+        src: slick-font-url("../fonts/slick.eot?#iefix") format("embedded-opentype"), slick-font-url("../fonts/slick.woff") format("woff"), slick-font-url("../fonts/slick.ttf") format("truetype"), slick-font-url("../fonts/slick.svg#slick") format("svg");
         font-weight: normal;
         font-style: normal;
     }
@@ -78,6 +78,7 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     border: none;
     outline: none;
+    z-index: 1;
     &:hover, &:focus {
         outline: none;
         background: transparent;
@@ -94,6 +95,7 @@ $slick-opacity-not-active: 0.25 !default;
         font-size: 20px;
         line-height: 1;
         color: $slick-arrow-color;
+        text-shadow: 1px 1px 1px#000000;
         opacity: $slick-opacity-default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -101,7 +103,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: -25px;
+    left: 10px;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
@@ -115,7 +117,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: -25px;
+    right: 10px;
     [dir="rtl"] & {
         left: -25px;
         right: auto;
@@ -142,6 +144,7 @@ $slick-opacity-not-active: 0.25 !default;
     text-align: center;
     padding: 0;
     margin: 0;
+    margin-top: 10px;
     width: 100%;
     li {
         position: relative;

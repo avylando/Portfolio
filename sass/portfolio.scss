@@ -6,7 +6,7 @@
 
 .portfolio__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   transform: translateX(-3000px);
 }
 
@@ -21,9 +21,31 @@
 }
 
 
-.portfolio__slider {
-  width: 65%;
+.portfolio__projects {
+  width: 50%;
 }
+
+.portfolio__slider,
+.portfolio__slider-nav {
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio__slider-nav {
+  margin-top: 30px;
+
+  li {
+    margin: 0 7px;
+    outline: none;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+
+}
+
 
 .portfolio__description {
   width: 30%;
@@ -50,6 +72,7 @@
   z-index: 1;
   width: 26%;
   height: 135px;
+  margin-top: 10px;
   cursor: pointer;
   transform: scale(1);
   transition: transform 0.5s;

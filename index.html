@@ -77,10 +77,11 @@
                 <use xlink:href="#icon-quality"></use>
               </svg>
               <h2 class="advantages__title">Качество</h2>
-              <p class="advantages__text">Применение актуальных технологий разработки веб-сайтов, верстка под все современные браузеры (Chrome, Firefox,
-                Safari, Opera, Yandex, Edge, IE11+), адаптивная верстка. Я следую принципам "
-                <a class="advantages__link" href="https://netology.ru/glossariy/progressive-enhancement" target="_blank" title="Progressive enhancement">прогрессивного улучшения</a>", "pixel perfect" (максимальное соответствие макету), а также доступности для
-                пользователей с ограниченными возможностями. Провожу базовую SEO-оптимизацию и загрузку сайта в CMS "Wordpress".
+              <p class="advantages__text">Применяю современные технологии при создании веб-сайтов. Верстаю под все популярные браузеры (Chrome, Firefox,
+                Safari, Opera, Yandex, Edge, IE11+), для разных устройств ("адаптивная/отзывчивая" верстка). Я следую принципам
+                "
+                <a class="advantages__link" href="https://netology.ru/glossariy/progressive-enhancement" target="_blank" title="Progressive enhancement">прогрессивного улучшения</a>", "pixel perfect" (максимальное соответствие макету), и доступности для пользователей
+                с ограниченными возможностями. Провожу базовую SEO-оптимизацию и загрузку сайта в CMS "Wordpress".
               </p>
             </div>
             <div class="advantages__column">
@@ -175,8 +176,8 @@
                 </div>
               </div>
             </div>
-            <div class="portfolio__slider">
-              <ul class="pgwSlider">
+            <div class="portfolio__projects">
+              <ul class="portfolio__slider">
                 <li>
                   <a href="https://avylando.github.io/Mishka/" target="_blank">
                     <img src="img/mishka-preview.jpg" data-large-src="img/mishka-preview.jpg">
@@ -204,6 +205,23 @@
                   </a>
                 </li>
               </ul>
+              <ul class="portfolio__slider-nav">
+                <li>
+                  <img src="img/mishka-preview_mini.jpg" alt="Mishka-mini">
+                </li>
+                <li>
+                  <img src="img/pink-preview_mini.jpg" alt="Pink-mini">
+                </li>
+                <li>
+                  <img src="img/sedona-preview_mini.jpg" alt="Sedona-mini">
+                </li>
+                <li>
+                  <img src="img/keksobooking-preview_mini.jpg" alt="Keksobooking-mini">
+                </li>
+                <li>
+                  <img src="img/kekstagram-preview_mini.jpg" alt="Kekstagram-mini">
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -222,7 +240,7 @@
                 <li class="about-me__item">Возраст: 26 лет</li>
                 <li class="about-me__item">Местонахождение: г. Челябинск</li>
                 <li class="about-me__item">Образование: высшее (ЮУрГУ, 2013 год)</li>
-                <li class="about-me__item">В сфере веб-разработки проходил обучение в
+                <li class="about-me__item">Проходил обучение веб-разработке в
                   <a href='https://htmlacademy.ru/profile/dolgov_anatoly'>HTML-Academy</a>
                 </li>
                 <li class="about-me__item">Основные увлечения: футбол, IT, музыка</li>
@@ -249,7 +267,7 @@
               </p>
               <p>
                 Моя почта:
-                <a class="page-footer__link" href="mailto: avylando@gmail.com" target="_blank">avylando@gmail.com</a>
+                <a class="page-footer__link" href="mailto:avylando@gmail.com" target="_blank">avylando@gmail.com</a>
               </p>
             </div>
             <div class="page-footer__block page-footer__block--social">
@@ -295,11 +313,57 @@
   <!-- </div> -->
 
   <script src="js/jquery-3.2.1.min.js"></script>
+  <!-- <script src="js/pgwslider.min.js"></script> -->
+  <script src="js/slick.min.js"></script>
   <script src="js/debounce.js"></script>
   <script src="js/scroll.js"></script>
-  <script src="js/pgwslider.min.js"></script>
+  <script>
+    $(".portfolio__slider").slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      fade: true,
+      asNavFor: '.portfolio__slider-nav',
 
-  <script defer>
+      // the magic
+      // responsive: [{
+
+      //   breakpoint: 1024,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     infinite: true
+      //   }
+
+      // }, {
+
+      //   breakpoint: 600,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     dots: true
+      //   }
+
+      // }, {
+
+      //   breakpoint: 300,
+      //   settings: "unslick" // destroys slick
+
+      // }]
+    });
+
+    $('.portfolio__slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.portfolio__slider',
+      dots: true,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '40px',
+      variableWidth: true,
+      focusOnSelect: true
+    });
+  </script>
+
+
+  <!-- <script defer>
     var pgwSlider = $('.pgwSlider').pgwSlider();
     $(document).ready(function () {
       pgwSlider;
@@ -312,7 +376,7 @@
       // verticalCentering: true,
       intervalDuration: 3000
     })
-  </script>
+  </script> -->
 </body>
 
 </html>
