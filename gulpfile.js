@@ -123,7 +123,7 @@ gulp.task("serve", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-    "fonts/**/*.{woff,woff2}",
+    "fonts/**/*.{woff,woff2,ttf,svg,eot}",
     "img/**",
     "js/**"
   ], {

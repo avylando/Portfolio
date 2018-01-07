@@ -11,6 +11,11 @@
   opacity: 0;
 }
 
+.advantages__wrapper--show {
+  opacity: 1;
+  transition: 1s;
+}
+
 .advantages__column {
   width: 30%;
 }
@@ -22,16 +27,16 @@
 }
 
 .advantages__title {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 50px;
   text-align: center;
   margin-top: 0;
 }
 
 .advantages__text {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 26px;
-  text-align: center;
+  text-align: left;
 }
 
 .advantages__link {

@@ -61,3 +61,47 @@ a {
   padding-left: 40px;
   padding-right: 40px;
 }
+
+.button {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #446080;
+  padding: 10px 15px;
+  border: 2px solid #446080;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #446080;
+    transition: 0.3s;
+  }
+}
+
+.up-arrow {
+  opacity: 0;
+  z-index: 10000;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 1px;
+  height: 1px;
+  border-bottom: 20px solid rgba($color: #000000, $alpha: 0.8);
+  border-top: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.up-arrow--show {
+  opacity: 1;
+  transition: 0.3s;
+}

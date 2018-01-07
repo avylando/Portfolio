@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,8 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
+  <div class="up-arrow"></div>
+
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper">
@@ -24,13 +26,16 @@
         <nav class="page-header__nav">
           <ul class="page-header__menu menu">
             <li class="menu__item">
-              <a class="menu__link" href="#">Мои работы</a>
+              <a class="menu__link menu__link--cooperation" href="#">Сотрудничество</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Обо мне</a>
+              <a class="menu__link menu__link--portfolio" href="#">Мои проекты</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
+              <a class="menu__link menu__link--me" href="#">Обо мне</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--contacts" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -52,7 +57,7 @@
       <div class="hello__filter"></div>
       <div class="hello__banner">
         <h1 class="hello__title">Анатолий Долгов</h1>
-        <p class="hello__text">Верстка сайтов. HTML, CSS, JavaScript</p>
+        <p class="hello__text">Верстка, создание сайтов по дизайн-макету</p>
       </div>
       <!-- </div> -->
     </section>
@@ -65,12 +70,13 @@
               <svg class="advantages__icon">
                 <use xlink:href="#icon-document"></use>
               </svg>
-              <h2 class="advantages__title">Исполнительность</h2>
-              <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
-                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
-                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
-                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+              <h2 class="advantages__title">Порядок</h2>
+              <p class="advantages__text">Создаю сайты и лендинги по Вашему макету. Перед началом работы мы проведем небольшой бриф. На основе брифа
+                я составляю техническое задание, в котором подробно описываю все детали предстоящей работы. Мы обсуждаем
+                техническое задание, договариваемся о цене и сроках работы. Я создаю проект в строгом соответствии с техническим
+                заданием. Если Вы захотите внести в него изменения, мы дополнительно обсудим их. Если у Вас уже есть техническое
+                задание, я готов работать с ним.
+              </p>
             </div>
             <div class="advantages__column">
               <svg class="advantages__icon">
@@ -89,11 +95,11 @@
                 <use xlink:href="#icon-support"></use>
               </svg>
               <h2 class="advantages__title">Поддержка</h2>
-              <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit tristique leo, ut euismod est porttitor
-                a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales metus mollis libero vestibulum
-                porttitor. Quisque leo dolor, posuere sit amet justo et, ullamcorper pulvinar dolor. Cras quis magna quis
-                quam congue ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Nam non placerat arcu, at sagittis ipsum.</p>
+              <p class="advantages__text">Наше сотрудничество не заканчивается на создании проекта. Я гарантирую результат своей работы. Если Вам понадобится
+                консультация или помощь, Вы можете связаться со мной любым удобным способом. Мы можем договориться о постоянном
+                сопровождении и поддержке сайта, если Вам это необходимо. Если у Вас будут какие-либо идеи и предложения
+                о сотрудничестве, я всегда готов их рассмотреть.
+              </p>
             </div>
           </div>
         </div>
@@ -206,19 +212,19 @@
                 </li>
               </ul>
               <ul class="portfolio__slider-nav">
-                <li>
+                <li class="portfolio__slide">
                   <img src="img/mishka-preview_mini.jpg" alt="Mishka-mini">
                 </li>
-                <li>
+                <li class="portfolio__slide">
                   <img src="img/pink-preview_mini.jpg" alt="Pink-mini">
                 </li>
-                <li>
+                <li class="portfolio__slide">
                   <img src="img/sedona-preview_mini.jpg" alt="Sedona-mini">
                 </li>
-                <li>
+                <li class="portfolio__slide">
                   <img src="img/keksobooking-preview_mini.jpg" alt="Keksobooking-mini">
                 </li>
-                <li>
+                <li class="portfolio__slide">
                   <img src="img/kekstagram-preview_mini.jpg" alt="Kekstagram-mini">
                 </li>
               </ul>
@@ -244,9 +250,9 @@
                   <a href='https://htmlacademy.ru/profile/dolgov_anatoly'>HTML-Academy</a>
                 </li>
                 <li class="about-me__item">Основные увлечения: футбол, IT, музыка</li>
-                <li class="about-me__item">Своими главными качествами считаю честность и ответственность, не только в работе, но и в жизни</li>
+                <li class="about-me__item">Своими главными качествами считаю честность и ответственность. Не только в работе, но и в жизни</li>
               </ul>
-              <button class="about-me__button" type="button">Написать мне</button>
+              <button class="about-me__button button" type="button">Написать мне</button>
             </div>
           </div>
         </div>
@@ -269,25 +275,28 @@
                 Моя почта:
                 <a class="page-footer__link" href="mailto:avylando@gmail.com" target="_blank">avylando@gmail.com</a>
               </p>
+              <p>
+                Телефон: +7 (909) 075-05-46
+              </p>
             </div>
             <div class="page-footer__block page-footer__block--social">
               <ul class="page-footer__social-list">
                 <li class="page-footer__social-item">
-                  <a href="https://vk.com/avylando">
+                  <a class="page-footer__social-link" href="https://vk.com/avylando" target="_blank">
                     <svg class="page-footer__social-icon" width='50' height='50'>
                       <use xlink:href="#logo-vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="page-footer__social-item">
-                  <a href="https://www.instagram.com/anatoly_dolgov">
+                  <a class="page-footer__social-link" href="https://www.instagram.com/anatoly_dolgov" target="_blank">
                     <svg class="page-footer__social-icon" width='50' height='50'>
                       <use xlink:href="#logo-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="page-footer__social-item">
-                  <a href="https://github.com/avylando">
+                  <a class="page-footer__social-link" href="https://github.com/avylando" target="_blank">
                     <svg class="page-footer__social-icon" width='50' height='50'>
                       <use xlink:href="#logo-github"></use>
                     </svg>
@@ -295,7 +304,6 @@
                 </li>
               </ul>
             </div>
-            <div class="page-footer__block"></div>
           </div>
         </div>
       </div>
@@ -304,19 +312,64 @@
   </footer>
 
   <div class="modal feedback">
-    <div class="modal__wrapper">
-      <h2 class="modal__title"></h2>
-      <form action="" method="post"></form>
+    <div class="feedback__wrapper">
+      <h2 class="feedback__title">Заполните форму и я свяжусь с Вами</h2>
+      <svg class="feedback__close" width='14' height='14' tabindex="0">
+        <use xlink:href='#icon-close'></use>
+      </svg>
+      <form class="feedback__form" action="" method="post">
+
+        <div class="feedback__field">
+          <div class="feedback__block">
+            <label class="feedback__label" for="name">Имя:</label>
+            <input class="feedback__textfield" id="name" name="name" type="text" placeholder="Ваше имя*" required>
+          </div>
+          <div class="feedback__block">
+            <label class="feedback__label" for="surname">Фамилия:</label>
+            <input class="feedback__textfield" id="surname" name="surname" type="text" placeholder="Ваша фамилия">
+          </div>
+        </div>
+
+        <div class="feedback__field">
+          <div class="feedback__block feedback__block--contacts feedback__block--mail">
+            <label class="feedback__label" for="email">E-mail:</label>
+            <input class="feedback__textfield" id="email" name="email" type="email" placeholder="username@mail.com*" required>
+            <svg class="feedback__contact-icon feedback__contact-icon--mail" width="18" height="18">
+              <use xlink:href='#icon-mail'></use>
+            </svg>
+          </div>
+          <div class="feedback__block feedback__block--contacts feedback__block--phone">
+            <label class="feedback__label" for="phone">Номер телефона:</label>
+            <input class="feedback__textfield" id="phone" name="phone" type="tel" placeholder="+7 (9__) __ __ __">
+            <svg class="feedback__contact-icon feedback__contact-icon--phone" width="18" height="14">
+              <use xlink:href='#icon-phone'></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="feedback__field feedback__field--description">
+          <textarea class="feedback__textarea" placeholder="Дополнительная информация" maxlength="5000"></textarea>
+        </div>
+
+        <div class="feedback__button-block">
+          <button class="feedback__button button" type="submit">Отправить</button>
+          <p class="feedback__note">
+            <span class="feedback__note-star">*</span> — обязательные
+            <span class="feedback__note-plus"> для заполнения</span> поля
+          </p>
+        </div>
+      </form>
     </div>
   </div>
 
   <!-- </div> -->
 
   <script src="js/jquery-3.2.1.min.js"></script>
-  <!-- <script src="js/pgwslider.min.js"></script> -->
   <script src="js/slick.min.js"></script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/debounce.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/modal.js"></script>
   <script>
     $(".portfolio__slider").slick({
       autoplay: true,

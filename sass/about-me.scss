@@ -1,6 +1,6 @@
 .about-me {
   padding-top: 200px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   background-image: linear-gradient(to bottom, #ddefff 0%, #f2f2f2 100%);
   overflow-x: hidden;
 }
@@ -10,9 +10,9 @@
   justify-content: space-between;
   width: 100%;
   padding-right: 50px;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 5px 15px 0 #909293;
-  transform: translateX(3000px);
+  transform: translateX(1500px);
 
   &:hover {
     box-shadow: 0 8px 15px 0 #606263;
@@ -22,18 +22,13 @@
 
 .about-me--show {
   transform: translateX(0);
-  transition: transform 2s, box-shadow 0.5s;
-}
-
-.about-me--hide {
-  transform: translateX(3000px);
-  transition: transform 2s;
+  transition: transform 1.5s, box-shadow 0.5s;
 }
 
 .about-me__illustration {
   width: 60%;
   height: 365px;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: transparent;
   background-image: url('../img/portrait.jpg');
   background-position: 0% 75%;
@@ -43,6 +38,7 @@
 
 .about-me__bio {
   width: 40%;
+  padding-bottom: 10px;
 }
 
 .about-me__title {
@@ -50,29 +46,12 @@
 }
 
 .about-me__list {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 26px;
   list-style-image: url('../img/icon-check.svg');
   padding-left: 0;
 }
 
 .about-me__button {
-  display: block;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #446080;
-  padding: 10px 15px;
   margin-top: 20px;
-  border: 2px solid #446080;
-  border-radius: 10px;
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-
-  &:hover {
-    color: #ffffff;
-    background-color: #446080;
-  }
 }

@@ -7,19 +7,13 @@
 .portfolio__wrapper {
   display: flex;
   justify-content: space-around;
-  transform: translateX(-3000px);
+  transform: translateX(-1500px);
 }
 
 .portfolio--show {
   transform: translateX(0);
-  transition: transform 2s;
+  transition: transform 1.5s;
 }
-
-.portfolio--hide {
-  transform: translateX(-3000px);
-  transition: transform 0.2s;
-}
-
 
 .portfolio__projects {
   width: 50%;
@@ -34,9 +28,17 @@
 .portfolio__slider-nav {
   margin-top: 30px;
 
-  li {
+  .portfolio__slide {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
     margin: 0 7px;
     outline: none;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: #adacac;
+    }
   }
 
   img {
