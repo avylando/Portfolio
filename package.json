@@ -27,7 +27,7 @@
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.0",
     "stylelint": "8.1.x",
-    "stylelint-config-htmlacademy": "0.1.x",
+    "stylelint-config-htmlacademy": "^0.1.0",
     "svg4everybody": "^2.1.9"
   },
   "editorconfig-cli": [

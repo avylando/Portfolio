@@ -24,7 +24,7 @@
       }
 
       if (scrollValue > 900) {
-        window.debounce(sliderSection.classList.add('portfolio--show'), 100);
+        window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
       }
 
       if (scrollValue > 1700) {

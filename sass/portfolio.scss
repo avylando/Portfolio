@@ -1,103 +1,189 @@
-.portfolio {
-  padding-top: 300px;
-  background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
-  overflow-x: hidden;
-}
+@media (min-width: $tablet-width) {
+  .portfolio {
+    background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
+    overflow-x: hidden;
+  }
 
-.portfolio__wrapper {
-  display: flex;
-  justify-content: space-around;
-  transform: translateX(-1500px);
-}
+  .portfolio__wrapper {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-1500px);
+  }
 
-.portfolio--show {
-  transform: translateX(0);
-  transition: transform 1.5s;
-}
+  .portfolio__wrapper--show {
+    transform: translateX(0);
+    transition: transform 1.5s;
+  }
 
-.portfolio__projects {
-  width: 50%;
-}
+  .portfolio__description {
+    order: 2;
+    width: 100%;
+  }
 
-.portfolio__slider,
-.portfolio__slider-nav {
-  padding: 0;
-  margin: 0;
-}
+  .portfolio__projects {
+    order: 1;
+    width: 100%;
+    margin-bottom: 60px;
+  }
 
-.portfolio__slider-nav {
-  margin-top: 30px;
+  .portfolio__slider,
+  .portfolio__slider-nav {
+    padding: 0;
+    margin: 0;
+  }
 
-  .portfolio__slide {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 0 7px;
-    outline: none;
-    transition: 0.5s;
+  .portfolio__slider-nav {
+    margin-top: 30px;
+
+    .portfolio__slide {
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 0 7px;
+      outline: none;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: #adacac;
+      }
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+  }
+
+  .portfolio__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .portfolio__text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .portfolio__tools {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .portfolio__tool {
+    z-index: 1;
+    width: 18%;
+    margin-bottom: 45px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.5s;
+
+    &--sass,
+    &--ajax {
+      display: flex;
+
+      .portfolio__tool-link {
+        margin: auto;
+      }
+    }
 
     &:hover {
-      background-color: #adacac;
+      transform: scale(1.2);
+      transition: transform 0.5s;
     }
   }
 
-  img {
-    cursor: pointer;
+  .portfolio__tool-link {
+    display: block;
   }
 
+  .portfolio__tool-icon {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
 
-}
-
-
-.portfolio__description {
-  width: 30%;
-}
-
-.portfolio__title {
-  text-align: center;
-  margin-top: 0;
-}
-
-.portfolio__text {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.portfolio__tools {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.portfolio__tool {
-  z-index: 1;
-  width: 26%;
-  height: 135px;
-  margin-top: 10px;
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.5s;
-
-  &:hover {
-    transform: scale(1.2);
-    transition: transform 0.5s;
-  }
-}
-
-.portfolio__tool-icon {
-  &--sass {
-    transform: scale(1.2);
-    z-index: -1;
+    &--gulp {
+      width: 40%;
+    }
   }
 
-  &--gulp {
-    transform: scale(1.4);
-    z-index: -1;
+}
+
+@media (min-width: $desktop-width) {
+  
+  .portfolio__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  &--ajax {
-    transform: scale(1.3);
-    z-index: -1;
+  .portfolio__projects {
+    order: 2;
+    width: 50%;
+    margin-bottom: 0;
   }
+
+  .portfolio__description {
+    order: 1;
+    width: 40%;
+    overflow: hidden;
+  }
+
+  .portfolio__title {
+    margin-bottom: 50px;
+  }
+
+  .portfolio__text {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .portfolio__tools {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .portfolio__tool {
+    z-index: 1;
+    width: 30%;
+    margin-top: 35px;
+    margin-bottom: 0;
+
+    &--sass,
+    &--ajax {
+      display: flex;
+
+      .portfolio__tool-link {
+        margin: auto;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      transition: transform 0.5s;
+    }
+  }
+
+  .portfolio__tool-link {
+    display: block;
+  }
+
+  .portfolio__tool-icon {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+
+    &--gulp {
+      width: 55%;
+    }
+  }
+
 }
+
