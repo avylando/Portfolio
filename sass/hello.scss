@@ -1,6 +1,6 @@
 .hello {
   position: relative;
-  height: 560px;
+  height: 360px;
   // filter: blur(5px);
 }
 
@@ -27,14 +27,14 @@
   bottom: 0;
   right: 0;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   height: 170px;
   text-align: center;
 }
 
 .hello__title {
-  font-size: 45px;
-  line-height: 52px;
+  font-size: 32px;
+  line-height: 40px;
   text-align: center;
   width: 80%;
   max-width: 850px;
@@ -43,9 +43,53 @@
 }
 
 .hello__text {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
 }
+
+@media (min-width: $tablet-width) {
+  .hello {
+    height: 560px;
+    // filter: blur(5px);
+  }
+
+  .hello__banner {
+    width: 60%;
+    height: 170px;
+  }
+
+  .hello__title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .hello__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hello__title {
+    font-size: 45px;
+    line-height: 52px;
+
+  }
+
+  .hello__text {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+}
+
+
+
+
+
+
+
+

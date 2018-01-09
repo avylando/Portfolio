@@ -1,38 +1,102 @@
+.advantages {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(to bottom, #e8e8e8 0%, #f8ffdd 100%);
+  overflow-x: hidden;
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+}
+
+.advantages__wrapper--show {
+  opacity: 1;
+  transition: 1s;
+}
+
+.advantages__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.advantages__illustration {
+  width: 15%;
+}
+
+.advantages__icon {
+  width: 100%;
+  height: auto;
+}
+
+.advantages__description {
+  width: 75%;
+}
+
+.advantages__title {
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.advantages__text {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.advantages__link {
+  border-bottom: 1px dashed $textcolor;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .advantages {
     padding-top: 100px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to bottom, #e8e8e8 0%, #f8ffdd 100%);
-    overflow-x: hidden;
   }
 
   .advantages__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    opacity: 0;
-  }
 
-  .advantages__wrapper--show {
-    opacity: 1;
-    transition: 1s;
   }
 
   .advantages__block {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
     margin-bottom: 35px;
   }
 
-  .advantages__icon {
+  .advantages__illustration {
     width: 10%;
+  }
+
+  .advantages__icon {
   }
 
   .advantages__description {
     width: 85%;
+  }
+
+  .advantages__title {
+    font-size: 25px;
+    line-height: 50px;
+    text-align: left;
+  }
+
+  .advantages__text {
+    font-size: 15px;
+    line-height: 20px;
   }
 
   .advantages__link {
@@ -70,10 +134,7 @@
   }
 
   .advantages__title {
-    font-size: 25px;
-    line-height: 50px;
     text-align: center;
-    margin-top: 0;
   }
 
   .advantages__text {

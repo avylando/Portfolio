@@ -1,11 +1,19 @@
 'use strict';
 
 (function () {
+
+  var mobileWidth = 320;
+  var tabletWidth = 680;
+  var desktopWidth = 1090;
+  var currentWidth = document.body.clientWidth;
+
   var header = document.querySelector('.page-header');
   var upArrow = document.querySelector('.up-arrow');
   var advantagesSection = document.querySelector('.advantages__wrapper');
   var sliderSection = document.querySelector('.portfolio__wrapper');
   var aboutMeSection = document.querySelector('.about-me__wrapper');
+
+  // var widthComparator
 
   window.addEventListener('load', function () {
     window.addEventListener('scroll', function () {
@@ -19,17 +27,49 @@
         upArrow.classList.remove('up-arrow--show');
       }
 
-      if (scrollValue > 300) {
-        window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
+      if (currentWidth < tabletWidth) {
+        if (scrollValue > 50) {
+          window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
+        }
+
+        if (scrollValue > 1200) {
+          window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+        }
+
+        if (scrollValue > 2300) {
+          window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
+        }
       }
 
-      if (scrollValue > 900) {
-        window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+      if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
+
+        if (scrollValue > 100) {
+          window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
+        }
+
+        if (scrollValue > 1200) {
+          window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+        }
+
+        if (scrollValue > 2300) {
+          window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
+        }
+
+      } else if (currentWidth >= desktopWidth) {
+
+        if (scrollValue > 300) {
+          window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
+        }
+
+        if (scrollValue > 900) {
+          window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+        }
+
+        if (scrollValue > 1700) {
+          window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
+        }
       }
 
-      if (scrollValue > 1700) {
-        window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
-      }
     })
   })
 
@@ -59,31 +99,64 @@
     var difference = to - element.scrollTop;
     var perTick = difference / duration * 10;
 
-    setTimeout(function() {
-        element.scrollTop = element.scrollTop + perTick;
-        if (element.scrollTop === to) return;
-        scrollTo(element, to, duration - 10);
+    setTimeout(function () {
+      element.scrollTop = element.scrollTop + perTick;
+      if (element.scrollTop === to) return;
+      scrollTo(element, to, duration - 10);
     }, 10);
-}
+  }
 
   cooperation.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 700, 300);
+    if (currentWidth >= mobileWidth && currentWidth < tabletWidth) {
+      scrollTo(document.documentElement, 400, 300);
+    }
+
+    if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
+      scrollTo(document.documentElement, 540, 300);
+    }
+
+    if (currentWidth >= desktopWidth) {
+      scrollTo(document.documentElement, 700, 300);
+    }
+
   })
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 1550, 300);
+
+    if (currentWidth >= mobileWidth && currentWidth < tabletWidth) {
+      scrollTo(document.documentElement, 1725, 300);
+    }
+
+    if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
+      scrollTo(document.documentElement, 1535, 300);
+    }
+
+    if (currentWidth >= desktopWidth) {
+      scrollTo(document.documentElement, 1550, 300);
+    }
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 2200, 300);
+
+    if (currentWidth >= mobileWidth && currentWidth < tabletWidth) {
+      scrollTo(document.documentElement, 2840, 300);
+    }
+
+    if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
+      scrollTo(document.documentElement, 2735, 300);
+    }
+
+    if (currentWidth >= desktopWidth) {
+      scrollTo(document.documentElement, 2200, 300);
+    }
   })
 
   contacts.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 3000, 300);
+    scrollTo(document.documentElement, 4000, 300);
   })
 
 })();
