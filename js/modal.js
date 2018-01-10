@@ -1,48 +1,77 @@
 (function () {
-    var activateButton = document.querySelector('.about-me__button');
-    var modal = document.querySelector('.modal');
-    var closeButton = modal.querySelector('.feedback__close');
+  let fbActivateButton = document.querySelector('.about-me__button');
+  let feedback = document.querySelector('.feedback');
+  let fbCloseButton = feedback.querySelector('.feedback__close');
 
-    // window.addEventListener('load', function () {
-    //     setTimeout(function () {
-    //         modal.style.display = 'block';
-    //     }, 3000)
-    // })
+  let sendSuccess = document.querySelector('.send-success');
+  let ssCloseButton = sendSuccess.querySelector('.send-success__button');
 
-    var modalShowClickHandler = function () {
-        if (modal.classList.contains('modal--close')) {
-            modal.classList.remove('modal--close');
-            modal.classList.add('modal--show');
-        } else {
-            modal.classList.add('modal--show');
-        }
+  // window.addEventListener('load', function () {
+  //     setTimeout(function () {
+  //         feedback.style.display = 'block';
+  //     }, 3000)
+  // })
 
-        window.addEventListener('keydown', modalCloseEscHandler);
-        closeButton.addEventListener('keydown', modalCloseEnterHandler);
+  let modalShowClickHandler = function (modal, handlerEsc, handlerEnter) {
+    if (modal.classList.contains('modal--close')) {
+      modal.classList.remove('modal--close');
+      modal.classList.add('modal--show');
+    } else {
+      modal.classList.add('modal--show');
     }
 
-    var modalCloseClickHandler = function () {
-        if (modal.classList.contains('modal--show')) {
-            modal.classList.remove('modal--show');
-            modal.classList.add('modal--close');
+    window.addEventListener('keydown', handlerEsc);
+    closeButton.addEventListener('keydown', handlerEnter);
+  }
 
-            window.removeEventListener('keydown', modalCloseEscHandler);
-            closeButton.removeEventListener('keydown', modalCloseEnterHandler);
-        }
+  let modalCloseClickHandler = function (modal, handlerEsc, handlerEnter) {
+    if (modal.classList.contains('modal--show')) {
+      modal.classList.remove('modal--show');
+      modal.classList.add('modal--close');
+
+      window.removeEventListener('keydown', handlerEsc);
+      closeButton.removeEventListener('keydown', handlerEnter);
     }
+  }
 
-    var modalCloseEscHandler = function (evt) {
-        if (evt.keyCode === 27) {
-            modalCloseClickHandler();
-        }
+  let feedbackShowClickHandler = function () {
+    modalShowClickHandler(feedback, feedbackCloseEscHandler, feedbackCloseEnterHandler);
+  }
+
+  let feedbackCloseClickHandler = function () {
+    modalCloseClickHandler(feedback, feedbackCloseEscHandler, feedbackCloseEnterHandler);
+  }
+
+  let feedbackCloseEscHandler = function (evt) {
+    if (evt.keyCode === 27) {
+      feedbackCloseClickHandler();
     }
+  }
 
-    var modalCloseEnterHandler = function (evt) {
-        if (evt.keyCode === 13) {
-            modalCloseClickHandler();
-        }
+  let feedbackCloseEnterHandler = function (evt) {
+    if (evt.keyCode === 13) {
+      feedbackCloseClickHandler();
     }
+  }
 
-    activateButton.addEventListener('click', modalShowClickHandler);
-    closeButton.addEventListener('click', modalCloseClickHandler);
+  fbActivateButton.addEventListener('click', feedbackShowClickHandler);
+  fbCloseButton.addEventListener('click', feedbackCloseClickHandler);
+
+  let successCloseClickHandler = function () {
+    modalCloseClickHandler(sendSuccess, successCloseEscHandler, successCloseEnterHandler);
+  }
+
+  let successCloseEscHandler = function (evt) {
+    if (evt.keyCode === 27) {
+      successCloseClickHandler();
+    }
+  }
+
+  let successCloseEnterHandler = function (evt) {
+    if (evt.keyCode === 13) {
+      successCloseClickHandler();
+    }
+  }
+
+  ssCloseButton.addEventListener('click', successCloseClickHandler);
 })();

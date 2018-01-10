@@ -10,15 +10,13 @@
   var header = document.querySelector('.page-header');
   var upArrow = document.querySelector('.up-arrow');
   var advantagesSection = document.querySelector('.advantages__wrapper');
-  var sliderSection = document.querySelector('.portfolio__wrapper');
+  var sliderSection = document.querySelector('.portfolio__main-wrapper');
   var aboutMeSection = document.querySelector('.about-me__wrapper');
-
-  // var widthComparator
 
   window.addEventListener('load', function () {
     window.addEventListener('scroll', function () {
       var scrollValue = window.scrollY;
-      console.log(scrollValue);
+      // console.log(scrollValue);
       if (scrollValue > 100) {
         header.classList.add('page-header__mini');
         upArrow.classList.add('up-arrow--show');
@@ -33,7 +31,7 @@
         }
 
         if (scrollValue > 1200) {
-          window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+          window.debounce(sliderSection.classList.add('portfolio__main-wrapper--show'), 100);
         }
 
         if (scrollValue > 2300) {
@@ -47,25 +45,27 @@
           window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
         }
 
-        if (scrollValue > 1200) {
-          window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+        if (scrollValue > 1050) {
+          window.debounce(sliderSection.classList.add('portfolio__main-wrapper--show'), 100);
         }
 
         if (scrollValue > 2300) {
           window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
         }
 
-      } else if (currentWidth >= desktopWidth) {
+      }
+
+      if (currentWidth >= desktopWidth) {
 
         if (scrollValue > 300) {
           window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
         }
 
-        if (scrollValue > 900) {
-          window.debounce(sliderSection.classList.add('portfolio__wrapper--show'), 100);
+        if (scrollValue > 950) {
+          window.debounce(sliderSection.classList.add('portfolio__main-wrapper--show'), 100);
         }
 
-        if (scrollValue > 1700) {
+        if (scrollValue > 1550) {
           window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
         }
       }
@@ -106,52 +106,33 @@
     }, 10);
   }
 
-  cooperation.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    if (currentWidth >= mobileWidth && currentWidth < tabletWidth) {
-      scrollTo(document.documentElement, 400, 300);
+  var widthScrollComparator = function (mobileScroll, tabletScroll, desktopScroll) {
+    if (currentWidth < tabletWidth) {
+      scrollTo(document.documentElement, mobileScroll, 300);
     }
 
     if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-      scrollTo(document.documentElement, 540, 300);
+      scrollTo(document.documentElement, tabletScroll, 300);
     }
 
     if (currentWidth >= desktopWidth) {
-      scrollTo(document.documentElement, 700, 300);
+      scrollTo(document.documentElement, desktopScroll, 300);
     }
+  }
 
+  cooperation.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    widthScrollComparator(90, 540, 700);
   })
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-
-    if (currentWidth >= mobileWidth && currentWidth < tabletWidth) {
-      scrollTo(document.documentElement, 1725, 300);
-    }
-
-    if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-      scrollTo(document.documentElement, 1535, 300);
-    }
-
-    if (currentWidth >= desktopWidth) {
-      scrollTo(document.documentElement, 1550, 300);
-    }
+    widthScrollComparator(1505, 1535, 1640);
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-
-    if (currentWidth >= mobileWidth && currentWidth < tabletWidth) {
-      scrollTo(document.documentElement, 2840, 300);
-    }
-
-    if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-      scrollTo(document.documentElement, 2735, 300);
-    }
-
-    if (currentWidth >= desktopWidth) {
-      scrollTo(document.documentElement, 2200, 300);
-    }
+    widthScrollComparator(2630, 2735, 2370);
   })
 
   contacts.addEventListener('click', function (evt) {

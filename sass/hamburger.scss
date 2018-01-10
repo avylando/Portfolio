@@ -33,6 +33,7 @@
   height: 24px;
   display: inline-block;
   position: relative;
+  transition: 0.5s;
 }
 
 .hamburger-inner {
@@ -144,6 +145,12 @@
   .hamburger {
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: 0.5s;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 16px;
     transition: 0.5s;
   }
 

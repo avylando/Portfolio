@@ -1,17 +1,23 @@
 .portfolio {
   background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.portfolio__main-wrapper {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.portfolio__main-wrapper--show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 2s ease-out;
 }
 
 .portfolio__wrapper {
   display: flex;
   flex-direction: column;
-  transform: translateX(-1500px);
-}
 
-.portfolio__wrapper--show {
-  transform: translateX(0);
-  transition: transform 1.5s;
 }
 
 .portfolio__description {
