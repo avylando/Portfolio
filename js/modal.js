@@ -12,7 +12,7 @@
   //     }, 3000)
   // })
 
-  let modalShowClickHandler = function (modal, handlerEsc, handlerEnter) {
+  let modalShowClickHandler = function (modal, closeButton, handlerEsc, handlerEnter) {
     if (modal.classList.contains('modal--close')) {
       modal.classList.remove('modal--close');
       modal.classList.add('modal--show');
@@ -24,7 +24,7 @@
     closeButton.addEventListener('keydown', handlerEnter);
   }
 
-  let modalCloseClickHandler = function (modal, handlerEsc, handlerEnter) {
+  let modalCloseClickHandler = function (modal, closeButton, handlerEsc, handlerEnter) {
     if (modal.classList.contains('modal--show')) {
       modal.classList.remove('modal--show');
       modal.classList.add('modal--close');
@@ -35,11 +35,11 @@
   }
 
   let feedbackShowClickHandler = function () {
-    modalShowClickHandler(feedback, feedbackCloseEscHandler, feedbackCloseEnterHandler);
+    modalShowClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
   }
 
   let feedbackCloseClickHandler = function () {
-    modalCloseClickHandler(feedback, feedbackCloseEscHandler, feedbackCloseEnterHandler);
+    modalCloseClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
   }
 
   let feedbackCloseEscHandler = function (evt) {
@@ -58,7 +58,7 @@
   fbCloseButton.addEventListener('click', feedbackCloseClickHandler);
 
   let successCloseClickHandler = function () {
-    modalCloseClickHandler(sendSuccess, successCloseEscHandler, successCloseEnterHandler);
+    modalCloseClickHandler(sendSuccess, ssCloseButton, successCloseEscHandler, successCloseEnterHandler);
   }
 
   let successCloseEscHandler = function (evt) {

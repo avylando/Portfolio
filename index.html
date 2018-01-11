@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Forum&amp;subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -99,7 +99,7 @@
               </div>
 
             </div>
-            <div class="advantages__block">
+            <div class="advantages__block advantages__block--center">
               <div class="advantages__illustration">
                 <svg class="advantages__icon" width="62" height="62">
                   <use xlink:href="#icon-quality"></use>
@@ -315,6 +315,9 @@
               <p class="page-footer__text">
                 Телефон: +7 (909) 075-05-46
               </p>
+              <p class="page-footer__text page-footer__text--copyright">
+                &#169; Долгов Анатолий, 2018 год
+              </p>
             </div>
             <div class="page-footer__block page-footer__block--social">
               <ul class="page-footer__social-list">
@@ -357,11 +360,11 @@
       <form class="feedback__form" action="phpmailer/mail.php" method="post" enctype="multipart/form-data">
 
         <div class="feedback__field">
-          <div class="feedback__block">
+          <div class="feedback__block feedback__block--name">
             <label class="feedback__label" for="username">Имя:</label>
             <input class="feedback__textfield" id="username" name="name" type="text" placeholder="Ваше имя*" required>
           </div>
-          <div class="feedback__block">
+          <div class="feedback__block feedback__block--surname">
             <label class="feedback__label" for="surname">Фамилия:</label>
             <input class="feedback__textfield" id="surname" name="surname" type="text" placeholder="Ваша фамилия">
           </div>

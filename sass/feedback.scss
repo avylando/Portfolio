@@ -1,27 +1,116 @@
+.feedback {
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  font-size: 12px;
+}
+
+.feedback__wrapper {
+  position: relative;
+}
+
+.feedback__close {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    transition: 0.4s;
+  }
+}
+
+.feedback__title {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.feedback__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.feedback__block {
+  width: 100%;
+
+  &--contacts {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .feedback__textfield:focus + .feedback__contact-icon {
+    transform: rotate(360deg) scale(1.2);
+    fill: $firmviolet-hover;
+    transition: 0.6s;
+  }
+
+  &--surname {
+    display: none;
+  }
+
+}
+
+.feedback__label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.feedback__textfield,
+.feedback__textarea {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid $firmviolet;
+  border-radius: 5px;
+  outline: none;
+
+  &:focus {
+    border: 2px solid $firmviolet-hover;
+  }
+}
+
+.feedback__textarea {
+  height: 100px;
+  resize: none;
+}
+
+.feedback__contact-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  fill: $firmviolet;
+  transition: 0.6s;
+  // height: 18px;
+}
+
+.feedback__button {
+  color: $firmviolet;
+  padding: 10px 15px;
+  margin: 15px auto 0;
+  border: 2px solid $firmviolet;
+
+  &:hover,
+  &:focus {
+    background-color: $firmviolet;
+  }
+}
+
+.feedback__note {
+  font-size: 10px;
+  text-align: right;
+  margin: 0;
+  margin-top: 15px;
+}
+
 @media (min-width: $tablet-width) {
   .feedback {
     top: 15%;
-    left: 25%;
-    width: 50%;
-    font-size: 12px;
-  }
-
-  .feedback__wrapper {
-    position: relative;
-  }
-
-  .feedback__close {
-    position: absolute;
-    top: -15px;
-    right: 0;
-    cursor: pointer;
-    transition: 0.4s;
-    
-    &:hover,
-    &:focus {
-      transform: scale(1.2);
-      transition: 0.4s;
-    }
   }
 
   .feedback__title {
@@ -32,7 +121,7 @@
   }
 
   .feedback__field {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 15px;
   }
@@ -42,74 +131,13 @@
 
     &--contacts {
       position: relative;
+      margin-bottom: 0;
     }
 
-    &--mail {
-      .feedback__textfield:focus + .feedback__contact-icon--mail {
-        transform: rotate(360deg) scale(1.2);
-        fill: $formfocus;
-        transition: 0.6s;
-      }
+    &--surname {
+      display: block;
     }
 
-    &--phone {
-      .feedback__textfield:focus + .feedback__contact-icon--phone {
-        transform: rotate(360deg) scale(1.2);
-        fill: $formfocus;
-        transition: 0.6s;
-      }
-    }
-  }
-
-  .feedback__label {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-
-  .feedback__textfield,
-  .feedback__textarea {
-    width: 100%;
-    padding: 8px;
-    border: 2px solid $formcolor;
-    border-radius: 5px;
-    outline: none;
-
-    &:focus {
-      border: 2px solid $formfocus;
-    }
-  }
-
-  .feedback__textarea {
-    height: 100px;
-    resize: none;
-  }
-
-  .feedback__contact-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    fill: $formcolor;
-    transition: 0.6s;
-    // height: 18px;
-  }
-
-  .feedback__button {
-    color: $formcolor;
-    padding: 10px 15px;
-    margin: 15px auto 0;
-    border: 2px solid $formcolor;
-
-    &:hover,
-    &:focus {
-      background-color: $formcolor;
-    }
-  }
-
-  .feedback__note {
-    font-size: 10px;
-    text-align: right;
-    margin: 0;
-    margin-top: 15px;
   }
 }
 

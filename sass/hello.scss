@@ -1,6 +1,6 @@
 .hello {
   position: relative;
-  height: 360px;
+  height: 400px;
   // filter: blur(5px);
 }
 
@@ -23,11 +23,11 @@
   z-index: 2;
   position: absolute;
   left: 0;
-  top: 35%;
+  top: 40%;
   bottom: 0;
   right: 0;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   height: 170px;
   text-align: center;
 }
@@ -63,8 +63,8 @@
   }
 
   .hello__title {
-    font-size: 35px;
-    line-height: 42px;
+    font-size: 45px;
+    line-height: 45px;
   }
 
   .hello__text {
@@ -75,7 +75,7 @@
 
 @media (min-width: $desktop-width) {
   .hello__title {
-    font-size: 45px;
+    font-size: 50px;
     line-height: 52px;
 
   }

@@ -1,25 +1,25 @@
 @font-face {
   font-weight: normal;
-  font-family: "Open Sans";
+  font-family: "Roboto Slab";
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  src: url("../fonts/RobotoSlab-Regular.woff2") format("woff2"), url("../fonts/RobotoSlab-Regular.woff") format("woff");
 }
 
 @font-face {
   font-weight: bold;
-  font-family: "Open Sans";
+  font-family: "Roboto Slab";
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  src: url("../fonts/RobotoSlab-Bold.woff2") format("woff2"), url("../fonts/RobotoSlab-Bold.woff") format("woff");
 }
 
 @font-face {
   font-weight: 300;
-  font-family: "Open Sans";
+  font-family: "Roboto Slab";
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  src: url("../fonts/RobotoSlab-Light.woff2") format("woff2"), url("../fonts/RobotoSlab-Light.woff") format("woff");
 }
 
 html {
@@ -32,7 +32,7 @@ body {
   // font-family: "Open Sans", "Tahoma", sans-serif;
   font-family: 'Roboto Slab', 'Georgia', serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   // text-transform: uppercase;
   line-height: 24px;
   color: $textcolor;
@@ -85,9 +85,9 @@ a {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #446080;
+  color: $firmviolet;
   padding: 10px 15px;
-  border: 2px solid #446080;
+  border: 2px solid $firmviolet;
   border-radius: 10px;
   background-color: transparent;
   outline: none;
@@ -97,7 +97,7 @@ a {
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: #446080;
+    background-color: $firmviolet;
     transition: 0.3s;
   }
 }

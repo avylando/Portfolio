@@ -18,8 +18,8 @@
   width: 100%;
   padding-top: 14px;
   padding-bottom: 14px;
-  border-bottom: 1px solid black;
-  border-top: 1px solid grey;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #9b9a9a;
 }
 
 .menu__link {
@@ -27,6 +27,7 @@
   position: relative;
   font-size: 14px;
   color: $textcolor;
+  text-transform: uppercase;
   padding-bottom: 3px;
   // width: 100%;
   color: inherit;
@@ -69,17 +70,15 @@
 
 @media (min-width: $tablet-width) {
   .menu {
-    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-around;
     margin-left: 0;
     margin-right: 0;
     background-color: transparent;
   }
 
   .menu__item {
-    width: 22%;
+    width: auto;
     padding-top: 0;
     padding-bottom: 0;
 
