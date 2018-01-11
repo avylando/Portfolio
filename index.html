@@ -273,7 +273,14 @@
     <div class="container">
       <div class="page-header__wrapper">
         <div class="page-header__logo">
-
+          <div class="page-header__author">
+            <span>Долгов Анатолий</span>
+          </div>
+          <button class="hamburger hamburger--spring" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
         <nav class="page-header__nav">
           <ul class="page-header__menu menu">
@@ -308,7 +315,7 @@
       <!-- <div class="parallax__layer parallax__layer--base"> -->
       <div class="hello__filter"></div>
       <div class="hello__banner">
-        <h1 class="hello__title">Анатолий Долгов</h1>
+        <h1 class="hello__title">Долгов Анатолий</h1>
         <p class="hello__text">Верстка, создание сайтов по дизайн-макету</p>
       </div>
       <!-- </div> -->
@@ -319,9 +326,11 @@
         <div class="container">
           <div class="advantages__wrapper">
             <div class="advantages__block">
-              <svg class="advantages__icon">
-                <use xlink:href="#icon-document"></use>
-              </svg>
+              <div class="advantages__illustration">
+                <svg class="advantages__icon" width="62" height="62">
+                  <use xlink:href="#icon-document"></use>
+                </svg>
+              </div>
               <div class="advantages__description">
                 <h2 class="advantages__title">Порядок</h2>
                 <p class="advantages__text">Создаю сайты и лендинги по Вашему макету. Перед началом работы мы проведем небольшой бриф. На основе брифа
@@ -334,23 +343,28 @@
 
             </div>
             <div class="advantages__block">
-              <svg class="advantages__icon">
-                <use xlink:href="#icon-quality"></use>
-              </svg>
+              <div class="advantages__illustration">
+                <svg class="advantages__icon" width="62" height="62">
+                  <use xlink:href="#icon-quality"></use>
+                </svg>
+              </div>
               <div class="advantages__description">
                 <h2 class="advantages__title">Качество</h2>
                 <p class="advantages__text">Применяю современные технологии при создании веб-сайтов. Верстаю под все популярные браузеры (Chrome, Firefox,
                   Safari, Opera, Yandex, Edge, IE11+), для разных устройств ("адаптивная/отзывчивая" верстка). Я следую принципам
-                  "<a class="advantages__link" href="https://netology.ru/glossariy/progressive-enhancement" target="_blank" title="Progressive enhancement">прогрессивного улучшения</a>", "pixel perfect" (максимальное соответствие макету), и доступности для пользователей
+                  "
+                  <a class="advantages__link" href="https://netology.ru/glossariy/progressive-enhancement" target="_blank" title="Progressive enhancement">прогрессивного улучшения</a>", "pixel perfect" (максимальное соответствие макету), и доступности для пользователей
                   с ограниченными возможностями. Провожу базовую SEO-оптимизацию и загрузку сайта в CMS "Wordpress".
                 </p>
               </div>
 
             </div>
             <div class="advantages__block">
-              <svg class="advantages__icon">
-                <use xlink:href="#icon-support"></use>
-              </svg>
+              <div class="advantages__illustration">
+                <svg class="advantages__icon" width="62" height="62">
+                  <use xlink:href="#icon-support"></use>
+                </svg>
+              </div>
               <div class="advantages__description">
                 <h2 class="advantages__title">Поддержка</h2>
                 <p class="advantages__text">Наше сотрудничество не заканчивается на создании проекта. Я гарантирую результат своей работы. Если Вам понадобится
@@ -371,125 +385,127 @@
     <section id="group-3" class="portfolio parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="container">
-          <h1 class="portfolio__title">Мои проекты</h1>
-          <div class="portfolio__wrapper">
-            <div class="portfolio__description">
-              <p class="portfolio__text">
-                В своей работе я использую:</p>
-              <div class="portfolio__tools">
-                <div class="portfolio__tool" title="HTML5">
-                  <a class="portfolio__tool-link" href="https://developer.mozilla.org/ru/docs/HTML/HTML5" target="_blank">
-                    <svg class="portfolio__tool-icon" width="118px" height="134px">
-                      <use xlink:href="#icon-html5"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="portfolio__tool" title="CSS3">
-                  <a class="portfolio__tool-link" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS3" target="_blank">
-                    <svg class="portfolio__tool-icon" width="118px" height="134px">
-                      <use xlink:href="#icon-css3"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="portfolio__tool" title="JavaScript">
-                  <a class="portfolio__tool-link" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">
-                    <svg class="portfolio__tool-icon" width="118px" height="134px">
-                      <use xlink:href="#icon-js"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="portfolio__tool portfolio__tool--sass" title="Sass">
-                  <a class="portfolio__tool-link" href="http://sass-scss.ru/" target="_blank">
-                    <svg class="portfolio__tool-icon portfolio__tool-icon--sass" width="126px" height="95px">
-                      <use xlink:href="#icon-sass"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="portfolio__tool portfolio__tool--gulp" title="Gulp">
-                  <a class="portfolio__tool-link" href="https://gulpjs.com/" target="_blank">
-                    <img class="portfolio__tool-icon portfolio__tool-icon--gulp" src="img/gulp-logo.png" width="47px" height="105px">
-                    <!-- <svg class="portfolio__tool-icon portfolio__tool-icon--gulp" width='47px' height='105px'>
+          <div class="portfolio__main-wrapper">
+            <h1 class="portfolio__title">Мои проекты</h1>
+            <div class="portfolio__wrapper">
+              <div class="portfolio__description">
+                <p class="portfolio__text">
+                  В своей работе я использую:</p>
+                <div class="portfolio__tools">
+                  <div class="portfolio__tool" title="HTML5">
+                    <a class="portfolio__tool-link" href="https://developer.mozilla.org/ru/docs/HTML/HTML5" target="_blank">
+                      <svg class="portfolio__tool-icon" width="118px" height="134px">
+                        <use xlink:href="#icon-html5"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool" title="CSS3">
+                    <a class="portfolio__tool-link" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS3" target="_blank">
+                      <svg class="portfolio__tool-icon" width="118px" height="134px">
+                        <use xlink:href="#icon-css3"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool" title="JavaScript">
+                    <a class="portfolio__tool-link" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">
+                      <svg class="portfolio__tool-icon" width="118px" height="134px">
+                        <use xlink:href="#icon-js"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool portfolio__tool--sass" title="Sass">
+                    <a class="portfolio__tool-link" href="http://sass-scss.ru/" target="_blank">
+                      <svg class="portfolio__tool-icon portfolio__tool-icon--sass" width="126px" height="95px">
+                        <use xlink:href="#icon-sass"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool portfolio__tool--gulp" title="Gulp">
+                    <a class="portfolio__tool-link" href="https://gulpjs.com/" target="_blank">
+                      <img class="portfolio__tool-icon portfolio__tool-icon--gulp" src="img/gulp-logo.png" width="47px" height="105px">
+                      <!-- <svg class="portfolio__tool-icon portfolio__tool-icon--gulp" width='47px' height='105px'>
                       <use xlink:href="#icon-gulp"></use>
                     </svg> -->
-                  </a>
-                </div>
-                <div class="portfolio__tool portfolio__tool--ajax" title="Asynchronous JavaScript and XML (AJAX)">
-                  <a class="portfolio__tool-link" href="https://ru.wikipedia.org/wiki/AJAX" target="_blank">
-                    <img class="portfolio__tool-icon portfolio__tool-icon--ajax" src="img/ajax-logo.png" width="60px" height="78px">
-                    <!-- <svg class="portfolio__tool-icon portfolio__tool-icon--ajax" width="60px" height="78px">
+                    </a>
+                  </div>
+                  <div class="portfolio__tool portfolio__tool--ajax" title="Asynchronous JavaScript and XML (AJAX)">
+                    <a class="portfolio__tool-link" href="https://ru.wikipedia.org/wiki/AJAX" target="_blank">
+                      <img class="portfolio__tool-icon portfolio__tool-icon--ajax" src="img/ajax-logo.png" width="60px" height="78px">
+                      <!-- <svg class="portfolio__tool-icon portfolio__tool-icon--ajax" width="60px" height="78px">
                       <use xlink:href="#icon-ajax"></use>
                     </svg> -->
-                  </a>
-                </div>
-                <div class="portfolio__tool" title="Wordpress">
-                  <a class="portfolio__tool-link" href="https://ru.wordpress.org/" target="_blank">
-                    <svg class="portfolio__tool-icon" width="116px" height="116px">
-                      <use xlink:href="#icon-wp"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="portfolio__tool" title="PHP">
-                  <a class="portfolio__tool-link" href="https://ru.wikipedia.org/wiki/PHP" target="_blank">
-                    <svg class="portfolio__tool-icon" width="116px" height="116px">
-                      <use xlink:href="#icon-php"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="portfolio__tool" title="GitHub">
-                  <a class="portfolio__tool-link" href="https://github.com/avylando" target="_blank">
-                    <svg class="portfolio__tool-icon" width="116px" height="116px">
-                      <use xlink:href="#icon-github"></use>
-                    </svg>
-                  </a>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool" title="Wordpress">
+                    <a class="portfolio__tool-link" href="https://ru.wordpress.org/" target="_blank">
+                      <svg class="portfolio__tool-icon" width="116px" height="116px">
+                        <use xlink:href="#icon-wp"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool" title="PHP">
+                    <a class="portfolio__tool-link" href="https://ru.wikipedia.org/wiki/PHP" target="_blank">
+                      <svg class="portfolio__tool-icon" width="116px" height="116px">
+                        <use xlink:href="#icon-php"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="portfolio__tool" title="GitHub">
+                    <a class="portfolio__tool-link" href="https://github.com/avylando" target="_blank">
+                      <svg class="portfolio__tool-icon" width="116px" height="116px">
+                        <use xlink:href="#icon-github"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio__projects">
-              <ul class="portfolio__slider">
-                <li>
-                  <a href="https://avylando.github.io/Mishka/" target="_blank">
-                    <img src="img/mishka-preview.jpg" data-large-src="img/mishka-preview.jpg">
-                  </a>
-                </li>
-                <li>
-                  <a href="https://avylando.github.io/Pink/" target="_blank">
-                    <img src="img/pink-preview.jpg" data-large-src="img/pink-preview.jpg">
-                  </a>
-                </li>
-                <li>
-                  <img src="img/sedona-preview.jpg" data-large-src="img/sedona-preview.jpg">
-                  <!-- <span>Shanghai, China</span> -->
-                </li>
-                <li>
-                  <a href="https://avylando.github.io/Keksobooking/" target="_blank">
-                    <img src="img/keksobooking-preview.jpg" data-large-src="img/keksobooking-preview.jpg">
-                    <!-- <span>KEKSOBOOKING</span> -->
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="img/kekstagram-preview.jpg" data-large-src="img/kekstagram-preview.jpg">
-                    <!-- <span>KEKSTAGRAM</span> -->
-                  </a>
-                </li>
-              </ul>
-              <ul class="portfolio__slider-nav">
-                <li class="portfolio__slide">
-                  <img src="img/mishka-preview_mini.jpg" alt="Mishka-mini">
-                </li>
-                <li class="portfolio__slide">
-                  <img src="img/pink-preview_mini.jpg" alt="Pink-mini">
-                </li>
-                <li class="portfolio__slide">
-                  <img src="img/sedona-preview_mini.jpg" alt="Sedona-mini">
-                </li>
-                <li class="portfolio__slide">
-                  <img src="img/keksobooking-preview_mini.jpg" alt="Keksobooking-mini">
-                </li>
-                <li class="portfolio__slide">
-                  <img src="img/kekstagram-preview_mini.jpg" alt="Kekstagram-mini">
-                </li>
-              </ul>
+              <div class="portfolio__projects">
+                <ul class="portfolio__slider">
+                  <li>
+                    <a href="https://avylando.github.io/Mishka/" target="_blank">
+                      <img src="img/mishka-preview.jpg" data-large-src="img/mishka-preview.jpg">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://avylando.github.io/Pink/" target="_blank">
+                      <img src="img/pink-preview.jpg" data-large-src="img/pink-preview.jpg">
+                    </a>
+                  </li>
+                  <li>
+                    <img src="img/sedona-preview.jpg" data-large-src="img/sedona-preview.jpg">
+                    <!-- <span>Shanghai, China</span> -->
+                  </li>
+                  <li>
+                    <a href="https://avylando.github.io/Keksobooking/" target="_blank">
+                      <img src="img/keksobooking-preview.jpg" data-large-src="img/keksobooking-preview.jpg">
+                      <!-- <span>KEKSOBOOKING</span> -->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <img src="img/kekstagram-preview.jpg" data-large-src="img/kekstagram-preview.jpg">
+                      <!-- <span>KEKSTAGRAM</span> -->
+                    </a>
+                  </li>
+                </ul>
+                <ul class="portfolio__slider-nav">
+                  <li class="portfolio__slide">
+                    <img src="img/mishka-preview_mini.jpg" alt="Mishka-mini">
+                  </li>
+                  <li class="portfolio__slide">
+                    <img src="img/pink-preview_mini.jpg" alt="Pink-mini">
+                  </li>
+                  <li class="portfolio__slide">
+                    <img src="img/sedona-preview_mini.jpg" alt="Sedona-mini">
+                  </li>
+                  <li class="portfolio__slide">
+                    <img src="img/keksobooking-preview_mini.jpg" alt="Keksobooking-mini">
+                  </li>
+                  <li class="portfolio__slide">
+                    <img src="img/kekstagram-preview_mini.jpg" alt="Kekstagram-mini">
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -500,22 +516,23 @@
     <section id="group-4" class="about-me parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="container">
+
           <div class="about-me__wrapper">
+            <h2 class="about-me__title">Немного о cебе</h2>
             <div class="about-me__illustration"></div>
             <div class="about-me__bio">
-              <h2 class="about-me__title">Немного о cебе</h2>
               <ul class="about-me__list">
                 <li class="about-me__item">Возраст: 26 лет</li>
                 <li class="about-me__item">Местонахождение: г. Челябинск</li>
                 <li class="about-me__item">Образование: высшее (ЮУрГУ, 2013 год)</li>
                 <li class="about-me__item">Проходил обучение веб-разработке в
-                  <a class="about-me__link" href="https://htmlacademy.ru/profile/dolgov_anatoly">HTML-Academy</a>
+                  <a class="about-me__link" href="https://htmlacademy.ru/profile/dolgov_anatoly" target="_blank">HTML-Academy</a>
                 </li>
                 <li class="about-me__item">Основные увлечения: футбол, IT, музыка</li>
                 <li class="about-me__item">Своими главными качествами считаю честность и ответственность. Не только в работе, но и в жизни</li>
               </ul>
-              <button class="about-me__button button" type="button">Написать мне</button>
             </div>
+            <button class="about-me__button button" type="button">Написать мне</button>
           </div>
         </div>
       </div>
@@ -533,11 +550,11 @@
               <p class="page-footer__text">
                 Российская Федерация, г. Челябинск
               </p>
-              <p>
+              <p class="page-footer__text">
                 Моя почта:
                 <a class="page-footer__link" href="mailto:avylando@gmail.com" target="_blank">avylando@gmail.com</a>
               </p>
-              <p>
+              <p class="page-footer__text">
                 Телефон: +7 (909) 075-05-46
               </p>
             </div>
@@ -579,12 +596,12 @@
       <svg class="feedback__close" width="14" height="14" tabindex="0">
         <use xlink:href="#icon-close"></use>
       </svg>
-      <form class="feedback__form" action="" method="post">
+      <form class="feedback__form" action="phpmailer/mail.php" method="post" enctype="multipart/form-data">
 
         <div class="feedback__field">
           <div class="feedback__block">
-            <label class="feedback__label" for="name">Имя:</label>
-            <input class="feedback__textfield" id="name" name="name" type="text" placeholder="Ваше имя*" required="">
+            <label class="feedback__label" for="username">Имя:</label>
+            <input class="feedback__textfield" id="username" name="name" type="text" placeholder="Ваше имя*" required="">
           </div>
           <div class="feedback__block">
             <label class="feedback__label" for="surname">Фамилия:</label>
@@ -624,14 +641,22 @@
     </div>
   </div>
 
+  <div class="modal send-success">
+    <h2 class="send-success__title">Ваши данные успешно отправлены</h2>
+    <button type="button" class="send-success__button button">Закрыть</button>
+  </div>
+
   <!-- </div> -->
 
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/picturefill.min.js"></script>
+  <script src="js/hamburger.js"></script>
   <script src="js/debounce.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/backend.js"></script>
+  <script src="js/form.js"></script>
   <script>
     $(".portfolio__slider").slick({
       autoplay: true,
