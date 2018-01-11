@@ -1,7 +1,7 @@
 .about-me {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: linear-gradient(to bottom, #ddefff 0%, #f2f2f2 100%);
+  // background-image: linear-gradient(to bottom, #ddefff 0%, #f2f2f2 100%);
   overflow-x: hidden;
 }
 
@@ -28,7 +28,7 @@
 .about-me--show {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 2s ease-out, opacity 2s ease-out, box-shadow 0.5s;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out, box-shadow 0.5s;
 }
 
 .about-me__illustration {

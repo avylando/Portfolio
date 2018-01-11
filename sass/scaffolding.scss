@@ -24,18 +24,20 @@
 
 html {
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
   // background-image: url('../img/bg-carbon.png');
 }
 
 body {
-  font-family: "Open Sans", "Tahoma", sans-serif;
+  // font-family: "Open Sans", "Tahoma", sans-serif;
+  font-family: 'Roboto Slab', 'Georgia', serif;
   font-size: 18px;
   font-weight: 600;
   // text-transform: uppercase;
   line-height: 24px;
   color: $textcolor;
   min-width: 320px;
+  background-color: #e4e9eb;
 }
 
 *,
@@ -104,19 +106,36 @@ a {
   opacity: 0;
   z-index: 10000;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 25px;
+  right: 25px;
   width: 1px;
   height: 1px;
-  border-bottom: 20px solid rgba($color: #000000, $alpha: 0.8);
-  border-top: 20px solid transparent;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+  border-bottom: 15px solid #000000;
+  border-top: none;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
   cursor: pointer;
   transition: opacity 0.3s;
 }
 
 .up-arrow--show {
-  opacity: 1;
+  opacity: 0.8;
   transition: 0.3s;
+}
+
+@media (min-width: $tablet-width) {
+  .up-arrow {
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .up-arrow {
+    bottom: 50px;
+    right: 50px;
+  }
+
 }

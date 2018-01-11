@@ -20,7 +20,8 @@
   margin: 0;
   overflow: visible;
   outline: none;
-  transition: 0.5s;
+  transition: $transition-header-time;
+
 
   &:hover,
   &:focus {
@@ -33,7 +34,7 @@
   height: 24px;
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+  transition: $transition-header-time;
 }
 
 .hamburger-inner {
@@ -47,7 +48,7 @@
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #ffffff;
   border-radius: 4px;
   position: absolute;
   transition: transform 0.15s ease, width 0.5s, height 0.5s, background-color 0.5s !important;
@@ -143,37 +144,33 @@
 
 .page-header__mini {
   .hamburger {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition: 0.5s;
+    transform: scale(0.8);
+    transition: $transition-header-time;
   }
 
-  .hamburger-box {
-    width: 30px;
-    height: 16px;
-    transition: 0.5s;
-  }
+  // .hamburger-box {
+  //   width: 30px;
+  //   height: 16px;
+  //   transition: $transition-header-time;
+  // }
 
-  .hamburger-inner {
-    width: 30px;
-    height: 2px;
-    background-color: #ffffff;
-    transition: 0.5s;
+  // .hamburger-inner {
+  //   width: 30px;
+  //   height: 2px;
+  //   transition: $transition-header-time;
 
-    &::before {
-      width: 30px;
-      height: 2px;
-      top: 8px;
-      background-color: #ffffff;
-      transition: 0.5s;
-    }
+  //   &::before {
+  //     width: 30px;
+  //     height: 2px;
+  //     top: 8px;
+  //     transition: $transition-header-time;
+  //   }
 
-    &::after {
-      width: 30px;
-      height: 2px;
-      top: 16px;
-      background-color: #ffffff;
-      transition: 0.5s;
-    }
-  }
+  //   &::after {
+  //     width: 30px;
+  //     height: 2px;
+  //     top: 16px;
+  //     transition: $transition-header-time;
+  //   }
+  // }
 }

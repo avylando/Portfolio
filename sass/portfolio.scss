@@ -1,5 +1,5 @@
 .portfolio {
-  background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
+  // background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
   overflow: hidden;
 }
 
@@ -11,7 +11,7 @@
 .portfolio__main-wrapper--show {
   opacity: 1;
   transform: translateY(0);
-  transition: 2s ease-out;
+  transition: 1.5s ease-out;
 }
 
 .portfolio__wrapper {
@@ -38,6 +38,7 @@
 }
 
 .portfolio__slider-nav {
+  display: none;
   margin-top: 30px;
 
   .portfolio__slide {
@@ -138,6 +139,7 @@
 
 
   .portfolio__slider-nav {
+    display: block;
     margin-top: 30px;
 
   }

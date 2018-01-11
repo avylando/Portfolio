@@ -29,6 +29,7 @@
   color: $textcolor;
   padding-bottom: 3px;
   // width: 100%;
+  color: inherit;
   transition: 0.5s;
 
   &::after {
@@ -39,7 +40,7 @@
     left: 0;
     width: 0%;
     height: 1px;
-    background-color: $textcolor;
+    background-color: #ffffff;
     transition: 0.5s;
   }
 
@@ -63,19 +64,6 @@
 
   .menu__link {
     font-size: 12px;
-    color: #ffffff;
-
-    &::after {
-      background-color: #fff;
-    }
-
-    &:hover {
-      color: $minmenuhover;
-
-    &::after {
-      background-color: $minmenuhover;
-      }
-    }
   }
 }
 
@@ -98,59 +86,9 @@
     border: none;
   }
 
-  .menu__link {
-    display: inline-block;
-    position: relative;
-    font-size: 14px;
-    color: $textcolor;
-    padding-bottom: 3px;
-    // width: 100%;
-    transition: 0.5s;
-
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: $textcolor;
-      transition: 0.5s;
-    }
-
-    &:hover {
-      color: $menuhover;
-      transition: 0.5s;
-
-      &::after {
-        background-color: $menuhover;
-        width: 100%;
-        transition: 0.5s;
-      }
-    }
-  }
-
   .page-header__mini {
     .menu {
       background-color: transparent;
-    }
-
-    .menu__link {
-      font-size: 12px;
-      color: #ffffff;
-
-      &::after {
-        background-color: #fff;
-      }
-
-      &:hover {
-        color: $minmenuhover;
-
-        &::after {
-        background-color: $minmenuhover;
-        }
-      }
     }
   }
 }

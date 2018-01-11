@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Forum&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -22,7 +24,7 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo">
           <div class="page-header__author">
-            <span>Долгов Анатолий</span>
+            <span>Разработка веб-сайтов</span>
           </div>
           <button class="hamburger hamburger--spring" type="button">
             <span class="hamburger-box">
@@ -47,9 +49,16 @@
           </ul>
         </nav>
         <div class="page-header__localisation">
-          <svg class="page-header__uk-icon" width='25' height='13'>
+          <!-- <svg class="page-header__uk-icon" width='25' height='13'>
             <use xlink:href='#icon-uk'></use>
-          </svg>
+          </svg> -->
+          <a class="page-header__localisation-link" href="http://">
+            <img src="img/russia-flag-icon.png" alt="russian" class="page-header__flag-icon page-header__flag-icon--russia" width="25" height="25">
+          </a>
+          <a class="page-header__localisation-link" href="http://">
+            <img src="img/uk-flag-icon.png" alt="english" class="page-header__flag-icon page-header__flag-icon--uk" width="25" height="25">
+          </a>
+
         </div>
       </div>
     </div>
@@ -316,7 +325,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="page-footer__social-item">
+                <li class="page-footer__social-item page-footer__social-item--instagram">
                   <a class="page-footer__social-link" href="https://www.instagram.com/anatoly_dolgov" target="_blank">
                     <svg class="page-footer__social-icon" width='50' height='50'>
                       <use xlink:href="#logo-instagram"></use>
@@ -410,32 +419,34 @@
     $(".portfolio__slider").slick({
       autoplay: true,
       autoplaySpeed: 2000,
-      fade: true,
+      // fade: true,
       asNavFor: '.portfolio__slider-nav',
 
       // the magic
-      // responsive: [{
+      responsive: [{
 
-      //   breakpoint: 1024,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     infinite: true
-      //   }
+        breakpoint: 320,
+        settings: {
 
-      // }, {
+        }
 
-      //   breakpoint: 600,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     dots: true
-      //   }
+      }, {
 
-      // }, {
+        breakpoint: 660,
+        settings: {
+          centerMode: true,
+          centerPadding: '40px',
+          focusOnSelect: true
+        }
 
-      //   breakpoint: 300,
-      //   settings: "unslick" // destroys slick
+      }, {
 
-      // }]
+        breakpoint: 1090,
+        settings: {
+
+        }
+
+      }]
     });
 
     $('.portfolio__slider-nav').slick({
@@ -447,7 +458,24 @@
       centerMode: true,
       centerPadding: '40px',
       variableWidth: true,
-      focusOnSelect: true
+      focusOnSelect: true,
+      responsive: [{
+
+        breakpoint: 320,
+
+      }, {
+
+        breakpoint: 660,
+
+      }, {
+
+        breakpoint: 1090,
+        settings: {
+          // slidesToShow: 3,
+          // centerPadding: '40px',
+          dots: false
+        }
+      }]
     });
   </script>
   <script>
