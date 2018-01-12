@@ -46,11 +46,11 @@
   }
 
   &:hover {
-    color: $menuhover;
+    color: $firmblue;
     transition: 0.5s;
 
     &::after {
-      background-color: $menuhover;
+      background-color: $firmblue;
       width: 100%;
       transition: 0.5s;
     }

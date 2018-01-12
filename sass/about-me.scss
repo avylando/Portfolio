@@ -15,12 +15,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 #909293;
+  box-shadow: 0 0 15px 0 #909293;
   opacity: 0;
   transform: translateY(40px);
 
   &:hover {
-    box-shadow: 0 8px 15px 0 #606263;
+    box-shadow: 0 0 30px 0 #606263;
     transition: box-shadow 0.5s;
   }
 }
@@ -57,8 +57,17 @@
 .about-me__list {
   font-size: 12px;
   line-height: 26px;
-  list-style-image: url('../img/icon-check.svg');
+  list-style: none;
   padding-left: 0;
+  margin: 0;
+
+  &--add {
+    margin-left: 10px;
+  }
+}
+
+.about-me__item-title {
+  font-weight: 600;
 }
 
 .about-me__link {
@@ -85,52 +94,55 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
     height: 380px;
     padding-right: 20px;
     padding-top: 0;
     padding-bottom: 0;
+    padding: 20px;
     border-radius: 5px;
+    margin: 0 auto;
   }
 
 
   .about-me__illustration {
-    order: 1;
-    width: 50%;
-    height: 100%;
-    border-radius: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-position: -40px 80%;
+    // order: 1;
+    width: 240px;
+    height: 240px;
+    border-radius: 5px;;
+    background-position: -25px 80%;
     background-size: 150% 100%;
   }
 
   .about-me__bio {
-    order: 3;
-    width: 45%;
+    // order: 3;
+    width: 55%;
+    max-width: 400px;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 0;
+    margin-top: 64px;
   }
 
   .about-me__title {
-    order: 2;
-    font-size: 20px;
-    margin-top: 10px;
+    // order: 2;
+    font-size: 24px;
+    margin-top: 0;
     margin-left: 0;
+    margin-bottom: 43px;
   }
 
   .about-me__list {
     font-size: 12px;
     line-height: 26px;
-    list-style-image: url('../img/icon-check.svg');
     padding-left: 0;
   }
 
   .about-me__button {
-    order: 4;
-    margin-top: 10px;
-    margin-left: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-top: 0;
   }
 
 }
@@ -142,31 +154,50 @@
   }
 
   .about-me__wrapper {
-    padding-right: 50px;
+    justify-content: flex-start;
+    width: 75%;
+    max-width: 900px;
+    height: 500px;
+    padding: 35px;
   }
 
   .about-me__illustration {
-    width: 55%;
-    background-position: 0% 75%;
-    background-size: 90%;
+    width: 285px;
+    height: 285px;
+    background-position: -25px -14px;
+    background-size: 140%;
   }
 
   .about-me__bio {
-    width: 43%;
+    width: 80%;
+    max-width: 450px;
+    margin-top: 78px;
   }
 
   .about-me__title {
     font-size: 27px;
-    margin-top: 20px;
+    margin-bottom: 60px;
   }
 
   .about-me__list {
     font-size: 14px;
   }
 
-  .about-me__button {
-    margin-top: 25px;
+  .about-me__item {
+    margin-bottom: 12px;
+
+    &--add {
+      margin-bottom: 0;
+    }
   }
+
+  .about-me__button {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    margin-top: 0;
+  }
+
 }
 
 
