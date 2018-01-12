@@ -16,7 +16,7 @@
   window.addEventListener('load', function () {
     window.addEventListener('scroll', function () {
       var scrollValue = window.scrollY;
-      // console.log(scrollValue);
+      console.log(scrollValue);
       if (scrollValue > 100) {
         header.classList.add('page-header__mini');
         upArrow.classList.add('up-arrow--show');
@@ -122,7 +122,7 @@
 
   cooperation.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(90, 540, 700);
+    widthScrollComparator(90, 540, 600);
   })
 
   portfolio.addEventListener('click', function (evt) {
