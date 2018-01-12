@@ -12,12 +12,59 @@
   var advantagesSection = document.querySelector('.advantages__wrapper');
   var sliderSection = document.querySelector('.portfolio__main-wrapper');
   var aboutMeSection = document.querySelector('.about-me__wrapper');
+  var cooperation = document.querySelector('.menu__link--cooperation');
+  var portfolio = document.querySelector('.menu__link--portfolio');
+  var aboutMe = document.querySelector('.menu__link--me');
+  var contacts = document.querySelector('.menu__link--contacts');
+  var menuItems = document.querySelectorAll('.menu__link');
+  var timeout;
+
+  var checkActiveItems = function (element) {
+
+    menuItems.forEach(function (item) {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+
+      if (element) {
+        if (item.classList.contains('menu__link--active') && item !== element) {
+          item.classList.remove('menu__link--active');
+        }
+        timeout = setTimeout(function () { element.classList.add('menu__link--active') }, 300);
+      } else {
+        item.classList.remove('menu__link--active');
+      }
+    });
+
+  }
+
+  var scrollValueComparator = function (scrollValue, advBpoint, portBpoint, aboutBpoint, contBpoint) {
+    if (scrollValue <= advBpoint) {
+      checkActiveItems();
+    }
+    if (scrollValue > advBpoint && scrollValue <= portBpoint) {
+      advantagesSection.classList.add('advantages__wrapper--show');
+      checkActiveItems(cooperation);
+    }
+    if (scrollValue > portBpoint && scrollValue <= aboutBpoint) {
+      sliderSection.classList.add('portfolio__main-wrapper--show');
+      checkActiveItems(portfolio);
+    }
+    if (scrollValue > aboutBpoint && scrollValue <= contBpoint) {
+      aboutMeSection.classList.add('about-me--show');
+      checkActiveItems(aboutMe);
+    }
+    if (scrollValue > contBpoint) {
+
+      checkActiveItems(contacts);
+    }
+  }
 
   window.addEventListener('load', function () {
     window.addEventListener('scroll', function () {
-      var scrollValue = window.scrollY;
-      // console.log(scrollValue);
-      if (scrollValue > 100) {
+      var scrollTop = window.scrollY;
+      console.log(scrollTop);
+      if (scrollTop > 100) {
         header.classList.add('page-header__mini');
         upArrow.classList.add('up-arrow--show');
       } else if (header.classList.contains('page-header__mini')) {
@@ -26,50 +73,16 @@
       }
 
       if (currentWidth < tabletWidth) {
-        if (scrollValue > 50) {
-          window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
-        }
-
-        if (scrollValue > 1200) {
-          window.debounce(sliderSection.classList.add('portfolio__main-wrapper--show'), 100);
-        }
-
-        if (scrollValue > 2300) {
-          window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
-        }
+        scrollValueComparator(scrollTop, 50, 1200, 2300, 3000);
       }
 
       if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-
-        if (scrollValue > 100) {
-          window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
-        }
-
-        if (scrollValue > 1050) {
-          window.debounce(sliderSection.classList.add('portfolio__main-wrapper--show'), 100);
-        }
-
-        if (scrollValue > 2300) {
-          window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
-        }
-
+        scrollValueComparator(scrollTop, 100, 1050, 2400, 2800);
       }
 
       if (currentWidth >= desktopWidth) {
-
-        if (scrollValue > 300) {
-          window.debounce(advantagesSection.classList.add('advantages__wrapper--show'), 100);
-        }
-
-        if (scrollValue > 950) {
-          window.debounce(sliderSection.classList.add('portfolio__main-wrapper--show'), 100);
-        }
-
-        if (scrollValue > 1550) {
-          window.debounce(aboutMeSection.classList.add('about-me--show'), 100);
-        }
+        scrollValueComparator(scrollTop, 500, 1200, 2000, 2500);
       }
-
     })
   })
 
@@ -88,11 +101,6 @@
   upArrow.addEventListener('click', scrollUp);
 
   // Menu items scroll
-
-  var cooperation = document.querySelector('.menu__link--cooperation');
-  var portfolio = document.querySelector('.menu__link--portfolio');
-  var aboutMe = document.querySelector('.menu__link--me');
-  var contacts = document.querySelector('.menu__link--contacts');
 
   function scrollTo(element, to, duration) {
     if (duration <= 0) return;
@@ -122,22 +130,26 @@
 
   cooperation.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(90, 540, 700);
+    widthScrollComparator(400, 600, 700);
+
   })
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(1505, 1535, 1640);
+    widthScrollComparator(1955, 1500, 1500);
+    checkActiveItems(portfolio);
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(2630, 2735, 2370);
+    widthScrollComparator(2695, 2735, 2370);
+    checkActiveItems(aboutMe);
   })
 
   contacts.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 4000, 300);
+    scrollTo(document.documentElement, 3500, 300);
+    checkActiveItems(contacts);
   })
 
 })();
