@@ -19,10 +19,10 @@
   opacity: 0;
   transform: translateY(40px);
 
-  &:hover {
-    box-shadow: 0 0 30px 0 #606263;
-    transition: box-shadow 0.5s;
-  }
+  // &:hover {
+  //   box-shadow: 0 0 30px 0 #606263;
+  //   transition: box-shadow 0.5s;
+  // }
 }
 
 .about-me--show {
@@ -71,12 +71,7 @@
 }
 
 .about-me__link {
-  border-bottom: 1px dashed #000000;
-
-  &:hover,
-  &:focus {
-    border-bottom: none;
-  }
+  @include link-hover;
 }
 
 .about-me__button {
@@ -96,6 +91,7 @@
     align-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 800px;
     height: 380px;
     padding-right: 20px;
     padding-top: 0;
@@ -117,8 +113,8 @@
 
   .about-me__bio {
     // order: 3;
-    width: 55%;
-    max-width: 410px;
+    width: 60%;
+    max-width: 425px;
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 0;
@@ -137,6 +133,10 @@
     font-size: 12px;
     line-height: 22px;
     padding-left: 0;
+
+    @media (min-width: 780px) {
+      font-size: 14px;
+    }
   }
 
   .about-me__button {
@@ -181,7 +181,7 @@
   }
 
   .about-me__list {
-    font-size: 14px;
+    // font-size: 14px;
   }
 
   .about-me__item {

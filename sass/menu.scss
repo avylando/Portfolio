@@ -57,6 +57,15 @@
   }
 }
 
+.menu__link--active {
+  color: $firmblue;
+
+  &::after {
+    background-color: $firmblue;
+    width: 100%;
+  }
+}
+
 .page-header__mini {
   .menu {
     background-color: $miniheader-color;

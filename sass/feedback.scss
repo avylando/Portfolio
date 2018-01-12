@@ -81,12 +81,17 @@
 }
 
 .feedback__contact-icon {
+  display: none;
   position: absolute;
   bottom: 10px;
   right: 10px;
   fill: $firmviolet;
   transition: 0.6s;
   // height: 18px;
+
+  &--mail {
+    bottom: 8px;
+  }
 }
 
 .feedback__button {
@@ -138,6 +143,10 @@
       display: block;
     }
 
+  }
+
+  .feedback__contact-icon {
+    display: block;
   }
 }
 

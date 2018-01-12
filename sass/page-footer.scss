@@ -29,13 +29,7 @@
 }
 
 .page-footer__link {
-  border-bottom: 1px dashed $textcolor;
-  transition: 0.3s;
-
-  &:hover {
-    border-bottom-color: transparent;
-    transition: 0.3s;
-  }
+  @include link-hover;
 }
 
 .page-footer__text {

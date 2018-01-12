@@ -55,11 +55,7 @@
 }
 
 .advantages__link {
-  border-bottom: 1px dashed $textcolor;
-
-  &:hover {
-    border-bottom: none;
-  }
+  @include link-hover;
 }
 
 @media (min-width: $tablet-width) {
@@ -97,17 +93,9 @@
   }
 
   .advantages__text {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20px;
     text-align: left;
-  }
-
-  .advantages__link {
-    border-bottom: 1px dashed $textcolor;
-
-    &:hover {
-      border-bottom: none;
-    }
   }
 }
 
