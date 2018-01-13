@@ -32,5 +32,16 @@
     feedbackWindow.classList.add('modal--close');
   })
 
+  function checkAgree() {
+    var submit = document.querySelector('.feedback__button');
+    var agreeCheck = document.querySelector('.feedback__agree-input');
+    agreeCheck.addEventListener('click', function () {
+      agreeCheck.checked ? submit.disabled = '' : submit.disabled = 'disabled';
+    })
+    console.log(agreeCheck);
+
+  }
+
+  checkAgree();
 
 })();

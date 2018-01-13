@@ -276,7 +276,9 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo">
           <div class="page-header__author">
-            <span>Разработка веб-сайтов</span>
+            <b class="page-header__author-name">Долгов Анатолий</b>
+            <br>
+            <span class="page-header__author-sub">Разработка веб-сайтов</span>
           </div>
           <button class="hamburger hamburger--spring" type="button">
             <span class="hamburger-box">
@@ -376,10 +378,10 @@
               </div>
               <div class="advantages__description">
                 <h2 class="advantages__title">Поддержка</h2>
-                <p class="advantages__text">Наше сотрудничество не заканчивается по завершению проекта. Я гарантирую результат своей работы.
-                  В течении месяца с момента сдачи проекта я буду бесплатно сопровождать Ваш сайт. Вы всегда можете связаться со мной любым удобным способом,
-                  если Вам понадобится консультация или помощь. Мы можем договориться о постоянном сопровождении и поддержке сайта, если Вам это необходимо.
-                  Если у Вас будут какие-либо идеи и предложения о сотрудничестве, я всегда готов их рассмотреть.
+                <p class="advantages__text">Наше сотрудничество не заканчивается по завершению проекта. Я гарантирую результат своей работы. В течении
+                  месяца с момента сдачи проекта я буду бесплатно сопровождать Ваш сайт. Вы всегда можете связаться со мной
+                  любым удобным способом, если Вам понадобится консультация или помощь. Мы можем договориться о постоянном
+                  сопровождении и поддержке сайта, если Вам это необходимо. Я открыт к общению и приветствую интересные идеи и предложения.
                 </p>
               </div>
 
@@ -531,10 +533,14 @@
             <div class="about-me__illustration"></div>
             <div class="about-me__bio">
               <ul class="about-me__list">
-                <li class="about-me__item"><span class="about-me__item-title">Возраст: </span>26 лет</li>
-                <li class="about-me__item"><span class="about-me__item-title">Местонахождение: </span>Российская Федерация, г. Челябинск</li>
-                <li class="about-me__item"><span class="about-me__item-title">Образование: </span>высшее (ЮУрГУ, 2008 - 2013)</li>
-                <li class="about-me__item"><span class="about-me__item-title">Дополнительное образование: </span>
+                <li class="about-me__item">
+                  <span class="about-me__item-title">Возраст: </span>26 лет</li>
+                <li class="about-me__item">
+                  <span class="about-me__item-title">Местонахождение: </span>Российская Федерация, г. Челябинск</li>
+                <li class="about-me__item">
+                  <span class="about-me__item-title">Образование: </span>высшее (ЮУрГУ, 2008 - 2013)</li>
+                <li class="about-me__item">
+                  <span class="about-me__item-title">Дополнительное образование: </span>
                   <ul class="about-me__list about-me__list--add">
                     <li class="about-me__item about-me__item--add">Веб-разработка в
                       <a class="about-me__link" href="https://htmlacademy.ru/profile/dolgov_anatoly" target="_blank">"HTML-Academy"</a>
@@ -542,8 +548,11 @@
                     <li class="about-me__item about-me__item--add">Информационная безопасность (БГТУ)</li>
                   </ul>
                 </li>
-                <li class="about-me__item"><span class="about-me__item-title">Увлечения: </span>футбол, IT, музыка, горнолыжный спорт</li>
-                <li class="about-me__item"><span class="about-me__item-title">Личное: </span>Своими главными качествами считаю честность и ответственность. Не только в работе, но и в жизни</li>
+                <li class="about-me__item">
+                  <span class="about-me__item-title">Увлечения: </span>футбол, IT, музыка, горнолыжный спорт</li>
+                <li class="about-me__item">
+                  <span class="about-me__item-title">Личное: </span>Своими главными качествами считаю честность и ответственность. Не только в работе, но и
+                  в жизни</li>
               </ul>
             </div>
             <button class="about-me__button button" type="button">Написать мне</button>
@@ -648,6 +657,11 @@
         </div>
 
         <div class="feedback__button-block">
+          <div class="feedback__field feedback__field--agree">
+            <input class="feedback__agree-input" type="checkbox" name="agree-personal-data" id="agree" checked="">
+            <label class="feedback__agree-label" for="agree">Нажимая на кнопку "Отправить", я даю своё согласие на обработку персональных данных</label>
+          </div>
+
           <button class="feedback__button button" type="submit">Отправить</button>
           <p class="feedback__note">
             <span class="feedback__note-star">*</span> — обязательные
@@ -712,7 +726,7 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.portfolio__slider',
-      dots: true,
+      // dots: true,
       arrows: false,
       centerMode: true,
       centerPadding: '40px',

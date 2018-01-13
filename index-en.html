@@ -276,7 +276,9 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo">
           <div class="page-header__author">
-            <span>Web development</span>
+            <b class="page-header__author-name">Dolgov Anatoly</b>
+            <br>
+            <span class="page-header__author-sub">Web Development</span>
           </div>
           <button class="hamburger hamburger--spring" type="button">
             <span class="hamburger-box">
@@ -343,9 +345,10 @@
               <div class="advantages__description">
                 <h2 class="advantages__title">Discipline</h2>
                 <p class="advantages__text">I create websites and landings based on your layout. Before starting work we will hold a brief. Based on
-                  the brief I make a technical task, which describe all the details of the work ahead. We discuss technical task,
-                  agree on the price and terms of work. I create the project in strict accordance with the technical task.
-                  If you want to make changes to it, we will discuss them further. If you already have a technical task, I'm ready to work with it.
+                  the brief I make a technical task, which describe all the details of the work ahead. We discuss technical
+                  task, agree on the price and terms of work. I create the project in strict accordance with the technical
+                  task. If you want to make changes to it, we will discuss them further. If you already have a technical
+                  task, I'm ready to work with it.
                 </p>
               </div>
 
@@ -362,7 +365,8 @@
                   Opera, Yandex, Edge, IE11 +), for different devices ("adaptive / responsive" layout). I follow the principles
                   of
                   <a class="advantages__link" href="https://en.wikipedia.org/wiki/Progressive_enhancement" target="_blank" title="Progressive enhancement">"progressive enhancement"</a>
-                  , "pixel perfect", and accessibility for users with disabilities. I'm doing the basic SEO-optimization and integration with "Wordpress".
+                  , "pixel perfect", and accessibility for users with disabilities. I'm doing the basic SEO-optimization and integration with
+                  "Wordpress".
                 </p>
               </div>
 
@@ -375,11 +379,11 @@
               </div>
               <div class="advantages__description">
                 <h2 class="advantages__title">Support</h2>
-                <p class="advantages__text">Our cooperation does not end with the completion of the project. I guarantee the result of my work.
-                  In a month from the date of delivery of the project, I will maintain your website for free.
-                  If you need consultation or assistance, you can contact me in any convenient way.
-                  We can agree on a permanent maintenance and support of the site, if you need it.
-                  If you have any ideas and suggestions about cooperation, I am always ready to consider them.
+                <p class="advantages__text">Our cooperation does not end with the completion of the project. I guarantee the result of my work. In a
+                  month from the date of delivery of the project, I will maintain your website for free. If you need consultation
+                  or assistance, you can contact me in any convenient way. We can agree on a permanent maintenance and support
+                  of the site, if you need it. If you have any ideas and suggestions about cooperation, I am always ready
+                  to consider them.
                 </p>
               </div>
 
@@ -549,8 +553,8 @@
                 <li class="about-me__item">
                   <span class="about-me__item-title">Hobbies: </span>football, IT, music, skiing</li>
                 <li class="about-me__item">
-                  <span class="about-me__item-title">Personal: </span>I consider honesty and responsibility to be my main characteristics. Not only in work, but also
-                  in life</li>
+                  <span class="about-me__item-title">Personal: </span>I consider honesty and responsibility to be my main characteristics. Not only in work,
+                  but also in life</li>
               </ul>
             </div>
             <button class="about-me__button button" type="button">Write me</button>
@@ -655,6 +659,10 @@
         </div>
 
         <div class="feedback__button-block">
+            <div class="feedback__field feedback__field--agree">
+                <input class="feedback__agree-input" type="checkbox" name="agree-personal-data" id="agree" checked="">
+                <label class="feedback__agree-label" for="agree">By clicking on the "Submit" button, I agree to the processing of personal data</label>
+              </div>
           <button class="feedback__button button" type="submit">Submit</button>
           <p class="feedback__note">
             <span class="feedback__note-star">*</span> — required fields
@@ -718,7 +726,7 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.portfolio__slider',
-      dots: true,
+      // dots: true,
       arrows: false,
       centerMode: true,
       centerPadding: '40px',

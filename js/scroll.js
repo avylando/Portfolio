@@ -88,13 +88,13 @@
 
   // Up arrow scroll to top
 
-  var timeout;
+  var timeoutScroll;
   function scrollUp() {
     var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     if (top > 0) {
       window.scrollBy(0, -100);
-      timeout = setTimeout(scrollUp, 20);
-    } else clearTimeout(timeout);
+      timeoutScroll = setTimeout(scrollUp, 20);
+    } else clearTimeout(timeoutScroll);
     return false;
   }
 
@@ -130,19 +130,19 @@
 
   cooperation.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(400, 600, 700);
+    widthScrollComparator(400, 600, 680);
 
   })
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(1955, 1500, 1500);
+    widthScrollComparator(1955, 1500, 1515);
     checkActiveItems(portfolio);
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(2695, 2735, 2370);
+    widthScrollComparator(2695, 2735, 2275);
     checkActiveItems(aboutMe);
   })
 
