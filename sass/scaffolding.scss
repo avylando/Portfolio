@@ -64,13 +64,12 @@ a {
   padding-right: 20px;
 }
 
-// @media (min-width: $tablet-width) {
-//   .container {
-//     padding-left: 20px;
-//     padding-right: 20px;
-//   }
-
-// }
+@media (min-width: $tablet-width) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 
 @media (min-width: $desktop-width) {
   .container {
@@ -99,6 +98,10 @@ a {
     color: #ffffff;
     background-color: $firmviolet;
     transition: 0.3s;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 

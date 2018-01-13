@@ -39,19 +39,28 @@
 }
 
 .page-header__author {
-  padding: 15px;
   padding-left: 70px;
+}
+
+.page-header__author-name {
+  font-size: 16px;
+  transition: $transition-header-time;
+}
+
+.page-header__author-sub {
+  font-size: 12px;
+  transition: $transition-header-time;
 }
 
 .page-header__localisation {
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 60px;
+  height: 55px;
   width: 20px;
   transition: $transition-header-time;
 }
@@ -70,7 +79,7 @@
 }
 
 .page-header__flag-icon {
-  display: block;
+  diszplay: block;
 }
 
 .page-header__nav {
@@ -97,8 +106,19 @@
   }
 
   .page-header__localisation {
-    height: 41px;
+    top: 5px;
+    height: 50px;
     width: 16px;
+    transition: $transition-header-time;
+  }
+
+  .page-header__author-name {
+    font-size: 14px;
+    transition: $transition-header-time;
+  }
+
+  .page-header__author-sub {
+    font-size: 10px;
     transition: $transition-header-time;
   }
 }

@@ -136,13 +136,13 @@
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(1955, 1500, 1500);
+    widthScrollComparator(1955, 1500, 1515);
     checkActiveItems(portfolio);
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(2695, 2735, 2370);
+    widthScrollComparator(2695, 2735, 2275);
     checkActiveItems(aboutMe);
   })
 
