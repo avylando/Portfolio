@@ -34,8 +34,9 @@
 }
 
 .about-me__illustration {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 280px;
+  height: 280px;
   border-radius: 5px;
   background-color: transparent;
   background-image: url('../img/portrait.jpg');
@@ -48,7 +49,7 @@
   width: 100%;
   max-width: 560px;
   padding-bottom: 10px;
-  padding-left: 40px;
+  padding-left: 15px;
   padding-right: 20px;
   margin-top: 30px;
 }
@@ -109,6 +110,7 @@
   .about-me__illustration {
     // order: 1;
     width: 240px;
+    max-width: 100%;
     height: 240px;
     border-radius: 5px;
     background-position: -25px 80%;

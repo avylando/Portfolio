@@ -13,7 +13,7 @@ $name = $_POST['name'];
 $surname = $_POST['surname'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
-// $upload = $_POST['upload'];
+$additionally = $_POST['additionally'];
 
 // Принимаем UTM-метки
 
@@ -62,7 +62,7 @@ $mail->Username = "roadtoawe@mail.ru";
 $mail->Password = "supernatural123";
 
 //Set who the message is to be sent from
-$mail->setFrom('roadtoawe@mail.ru', 'Анатолий');
+$mail->setFrom('roadtoawe@mail.ru', 'SiteBot');
 
 //Set an alternative reply-to address
 $mail->addReplyTo('replyto@example.com', 'First Last');
@@ -80,6 +80,7 @@ $mail->Subject = 'Заявка из портфолио';
 //Replace the plain text body with one created manually
 $mail->Body = "Привет! " .$name. " " .$surname. " оставил заявку!
 <br>Его почта: " .$email. " телефон: " .$phone.
+"<br>Дополнительная информация: " .$additionally.
 // "<br><br>Пользователь пришел из: " .$utm_source.
 // "<br>Тип трафика: " .$utm_medium.
 // "<br>Название кампании: " .$utm_campaign.
@@ -110,7 +111,8 @@ $arr = array(
   "Имя пользователя: " => $name,
   "Фамилия:" => $surname,
   "Телефон: " => $phone,
-  "Email " => $email
+  "Email: " => $email,
+  "Дополнительно: " => $additionally
   // "Пользователь пришел из: " => $utm_source,
   // "Тип трафика: " => $utm_medium,
   // "Название кампании: " => $utm_campaign,

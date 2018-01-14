@@ -53,6 +53,9 @@
 .advantages__text {
   font-size: 15px;
   line-height: 20px;
+  text-indent: 10px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .advantages__link {
@@ -182,6 +185,10 @@
     width: 32%;
   }
 
+  .advantages__description {
+    min-height: 410px;
+  }
+
   .advantages__title {
     text-align: center;
     margin-top: 25px;
@@ -191,7 +198,7 @@
     font-size: 15px;
     line-height: 26px;
     text-align: center;
-    min-height: 410px;
+
   }
 
 }

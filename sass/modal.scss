@@ -42,6 +42,9 @@
 
 .modal {
   position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   display: none;
   font-size: 15px;
   padding: 10px;

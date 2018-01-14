@@ -1,6 +1,5 @@
 .feedback {
   top: 10%;
-  left: 18%;
   width: 65%;
   min-width: 210px;
   font-size: 12px;
@@ -76,22 +75,28 @@
 .feedback__textarea {
   width: 100%;
   padding: 8px;
-  border: 2px solid $firmviolet;
-  border-radius: 5px;
   outline: none;
-
-  &:focus {
-    border: 2px solid $firmviolet-hover;
-  }
 }
 
 .feedback__textfield {
   width: 75%;
+  border: none;
+  border-bottom: 2px solid $firmviolet;
+
+  &:focus {
+    border-bottom: 2px solid $firmviolet-hover;
+  }
 }
 
 .feedback__textarea {
   height: 100px;
   resize: none;
+  border: 2px solid $firmviolet;
+  border-radius: 5px;
+
+  &:focus {
+    border: 2px solid $firmviolet-hover;
+  }
 }
 
 .feedback__contact-icon {
@@ -145,7 +150,6 @@
 @media (min-width: $tablet-width) {
   .feedback {
     top: 15%;
-    left: 25%;
     width: 50%;
   }
 

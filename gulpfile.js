@@ -125,7 +125,8 @@ gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2,ttf,svg,eot}",
     "img/**",
-    "js/**"
+    "js/**",
+    "favicon.ico"
   ], {
     base:"."
   })

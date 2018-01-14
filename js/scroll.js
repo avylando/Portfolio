@@ -136,19 +136,19 @@
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(1900, 1425, 1515);
+    widthScrollComparator(2200, 1540, 1515);
     checkActiveItems(portfolio);
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(2695, 2585, 2275);
+    widthScrollComparator(3000, 2800, 2275);
     checkActiveItems(aboutMe);
   })
 
   contacts.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 3500, 300);
+    scrollTo(document.documentElement, 3800, 300);
     checkActiveItems(contacts);
   })
 
