@@ -87,7 +87,7 @@
       }
 
       if (currentWidth >= desktopWidth) {
-        scrollValueComparator(scrollTop, 500, 1200, 2000, 2500);
+        scrollValueComparator(scrollTop, 500, 1200, 1800, 2300);
       }
     })
   })
