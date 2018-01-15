@@ -17,8 +17,14 @@
   var aboutMe = document.querySelector('.menu__link--me');
   var contacts = document.querySelector('.menu__link--contacts');
   var menuItems = document.querySelectorAll('.menu__link');
-  var timeout;
 
+  // Activate sections
+
+  advantagesSection.classList.remove('advantages__wrapper--nojs');
+  sliderSection.classList.remove('portfolio__main-wrapper--nojs');
+  aboutMeSection.classList.remove('about-me__wrapper--nojs');
+
+  var timeout;
   var checkActiveItems = function (element) {
 
     menuItems.forEach(function (item) {
@@ -51,7 +57,7 @@
       checkActiveItems(portfolio);
     }
     if (scrollValue > aboutBpoint && scrollValue <= contBpoint) {
-      aboutMeSection.classList.add('about-me--show');
+      aboutMeSection.classList.add('about-me__wrapper--show');
       checkActiveItems(aboutMe);
     }
     if (scrollValue > contBpoint) {

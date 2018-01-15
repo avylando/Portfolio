@@ -61,9 +61,11 @@
 .page-footer__social-link {
   display: inline-block;
   width: 100%;
+  outline: none;
   perspective: 200px;
 
-  &:hover > .page-footer__social-icon {
+  &:hover > .page-footer__social-icon,
+  &:focus > .page-footer__social-icon {
     transform: rotateY(360deg);
     transition: 0.8s;
   }

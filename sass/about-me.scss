@@ -27,10 +27,15 @@
   // }
 }
 
-.about-me--show {
+.about-me__wrapper--show {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 1.5s ease-out, opacity 1.5s ease-out, box-shadow 0.5s;
+  transition: 1.5s;
+}
+
+.about-me__wrapper--nojs {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-me__illustration {
