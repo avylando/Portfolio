@@ -31,7 +31,6 @@
   padding-bottom: 3px;
   // width: 100%;
   color: inherit;
-  outline: none;
   transition: 0.5s;
 
   &::after {
@@ -46,8 +45,7 @@
     transition: 0.5s;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $firmblue;
     transition: 0.5s;
 
