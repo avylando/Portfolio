@@ -12,8 +12,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 15px;
   border: 10px outset #DDDDDD;
   border-radius: 5px;
   box-shadow: 0 0 15px 0 #909293;
@@ -42,7 +41,7 @@
   width: 100%;
   max-width: 280px;
   height: 280px;
-  border-radius: 5px;
+  border-radius: 25px;
   background-color: transparent;
   background-image: url('../img/portrait.jpg');
   background-position: -25px 0px;
@@ -103,9 +102,6 @@
     width: 100%;
     max-width: 800px;
     height: 380px;
-    padding-right: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
     padding: 20px;
     border-radius: 5px;
     margin: 0 auto;

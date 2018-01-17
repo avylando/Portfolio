@@ -26,6 +26,8 @@ html {
   box-sizing: border-box;
   // background-color: #f2f2f2;
   // background-image: url('../img/bg-carbon.png');
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -38,6 +40,8 @@ body {
   color: $textcolor;
   min-width: 320px;
   background-color: #e4e9eb;
+
+  height: calc(100% + 1px);
 }
 
 *,

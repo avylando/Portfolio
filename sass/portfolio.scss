@@ -88,20 +88,8 @@
 
 .portfolio__tool {
   z-index: 1;
-  width: 18%;
+  width: 28%;
   margin-bottom: 45px;
-
-
-  &--sass,
-  &--ajax {
-    display: flex;
-
-    .portfolio__tool-link {
-      margin: auto;
-    }
-  }
-
-
 }
 
 .portfolio__tool-link {
@@ -123,10 +111,6 @@
   margin: 0 auto;
   width: 80%;
   height: auto;
-
-  &--gulp {
-    width: 45%;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -179,12 +163,8 @@
   }
 
   .portfolio__tool-icon {
-    width: 80%;
+    width: 95%;
     height: auto;
-
-    &--gulp {
-      width: 45%;
-    }
   }
 
 }
@@ -232,17 +212,13 @@
 
   .portfolio__tool {
     width: 33%;
-    margin-top: 30px;
+    margin-top: 35px;
     margin-bottom: 0;
 
   }
 
   .portfolio__tool-icon {
-    width: 60%;
-
-    &--gulp {
-      width: 45%;
-    }
+    width: 70%;
   }
 
 }
