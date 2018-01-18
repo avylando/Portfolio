@@ -6,7 +6,7 @@
   let inputName = form.querySelector('#username');
   let inputMail = form.querySelector('#email');
   let feedbackWindow = document.querySelector('.feedback');
-
+  let blackout = document.querySelector('.blackout');
 
   let successWindow = function () {
     let modalSuccess = document.querySelector('.send-success');
@@ -30,16 +30,15 @@
     window.sendRequest(formData, successWindow, errorWindow);
     feedbackWindow.classList.remove('modal--show');
     feedbackWindow.classList.add('modal--close');
+    blackout.classList.remove('blackout--show');
   })
 
-  function checkAgree() {
-    var submit = document.querySelector('.feedback__button');
-    var agreeCheck = document.querySelector('.feedback__agree-input');
+  let checkAgree = function () {
+    let submit = document.querySelector('.feedback__button');
+    let agreeCheck = document.querySelector('.feedback__agree-input');
     agreeCheck.addEventListener('click', function () {
       agreeCheck.checked ? submit.disabled = '' : submit.disabled = 'disabled';
     })
-    console.log(agreeCheck);
-
   }
 
   checkAgree();

@@ -2,21 +2,21 @@
 
 (function () {
 
-  var mobileWidth = 320;
-  var tabletWidth = 680;
-  var desktopWidth = 1090;
-  var currentWidth = document.body.clientWidth;
+  const mobileWidth = 320;
+  const tabletWidth = 680;
+  const desktopWidth = 1090;
+  let currentWidth = document.body.clientWidth;
 
-  var header = document.querySelector('.page-header');
-  var upArrow = document.querySelector('.up-arrow');
-  var advantagesSection = document.querySelector('.advantages__wrapper');
-  var sliderSection = document.querySelector('.portfolio__main-wrapper');
-  var aboutMeSection = document.querySelector('.about-me__wrapper');
-  var cooperation = document.querySelector('.menu__link--cooperation');
-  var portfolio = document.querySelector('.menu__link--portfolio');
-  var aboutMe = document.querySelector('.menu__link--me');
-  var contacts = document.querySelector('.menu__link--contacts');
-  var menuItems = document.querySelectorAll('.menu__link');
+  let header = document.querySelector('.page-header');
+  let upArrow = document.querySelector('.up-arrow');
+  let advantagesSection = document.querySelector('.advantages__wrapper');
+  let sliderSection = document.querySelector('.portfolio__main-wrapper');
+  let aboutMeSection = document.querySelector('.about-me__wrapper');
+  let cooperation = document.querySelector('.menu__link--cooperation');
+  let portfolio = document.querySelector('.menu__link--portfolio');
+  let aboutMe = document.querySelector('.menu__link--me');
+  let contacts = document.querySelector('.menu__link--contacts');
+  let menuItems = document.querySelectorAll('.menu__link');
 
   // Activate sections
 
@@ -24,8 +24,8 @@
   sliderSection.classList.remove('portfolio__main-wrapper--nojs');
   aboutMeSection.classList.remove('about-me__wrapper--nojs');
 
-  var timeout;
-  var checkActiveItems = function (element) {
+  let timeout;
+  let checkActiveItems = function (element) {
 
     menuItems.forEach(function (item) {
       if (timeout) {
@@ -44,7 +44,7 @@
 
   }
 
-  var scrollValueComparator = function (scrollValue, advBpoint, portBpoint, aboutBpoint, contBpoint) {
+  let scrollValueComparator = function (scrollValue, advBpoint, portBpoint, aboutBpoint, contBpoint) {
     if (scrollValue <= advBpoint) {
       checkActiveItems();
     }
@@ -68,7 +68,7 @@
 
   window.addEventListener('load', function () {
     window.addEventListener('scroll', function () {
-      var scrollTop = window.scrollY;
+      let scrollTop = window.scrollY;
       console.log(scrollTop);
       if (scrollTop > 100) {
         header.classList.add('page-header__mini');
@@ -83,7 +83,7 @@
       }
 
       if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-        scrollValueComparator(scrollTop, 100, 1050, 2400, 2800);
+        scrollValueComparator(scrollTop, 100, 1050, 2450, 2880);
       }
 
       if (currentWidth >= desktopWidth) {
@@ -94,68 +94,40 @@
 
   // Up arrow scroll to top
 
-  var timeoutScroll;
-  function scrollUp() {
-    var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-    if (top > 0) {
-      window.scrollBy(0, -100);
-      timeoutScroll = setTimeout(scrollUp, 20);
-    } else clearTimeout(timeoutScroll);
-    return false;
-  }
 
-  upArrow.addEventListener('click', scrollUp);
+  upArrow.addEventListener('click', function () {
+    window.animateScrollTo(0);
+  });
 
   // Menu items scroll
 
-  function scrollTo(element, to, duration) {
-    if (duration <= 0) return;
-    var difference = to - element.scrollTop;
-    var perTick = difference / duration * 10;
-
-    setTimeout(function () {
-      element.scrollTop = element.scrollTop + perTick;
-      if (element.scrollTop === to) return;
-      scrollTo(element, to, duration - 10);
-    }, 10);
-  }
-
-  var widthScrollComparator = function (mobileScroll, tabletScroll, desktopScroll) {
-    if (currentWidth < tabletWidth) {
-      scrollTo(document.documentElement, mobileScroll, 300);
-    }
-
-    if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-      scrollTo(document.documentElement, tabletScroll, 300);
-    }
-
-    if (currentWidth >= desktopWidth) {
-      scrollTo(document.documentElement, desktopScroll, 300);
-    }
-  }
-
   cooperation.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(400, 575, 680);
-
+    window.animateScrollTo(advantagesSection);
+    // widthScrollComparator(400, 575, 680);
+    checkActiveItems(cooperation);
   })
 
   portfolio.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(2200, 1540, 1515);
+    // widthScrollComparator(2200, 1540, 1515);
+    window.animateScrollTo(sliderSection);
     checkActiveItems(portfolio);
   })
 
   aboutMe.addEventListener('click', function (evt) {
     evt.preventDefault();
-    widthScrollComparator(3000, 2800, 2275);
+    // widthScrollComparator(3000, 2800, 2275);
+    window.animateScrollTo(aboutMeSection);
     checkActiveItems(aboutMe);
   })
 
   contacts.addEventListener('click', function (evt) {
     evt.preventDefault();
-    scrollTo(document.documentElement, 3800, 300);
-    checkActiveItems(contacts);
+    // scrollTo(document.documentElement, 3800, 300);
+    // animatedScrollTo(document.body, 3800, 300, checkActiveItems(contacts));
+    window.animateScrollTo(3800);
+
   })
 
 })();

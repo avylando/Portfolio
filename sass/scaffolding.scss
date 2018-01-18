@@ -68,20 +68,6 @@ a {
   padding-right: 20px;
 }
 
-@media (min-width: $tablet-width) {
-  .container {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .container {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
 .button {
   display: block;
   font-family: inherit;
@@ -130,7 +116,25 @@ a {
   transition: 0.3s;
 }
 
+.blackout {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.blackout--show {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .up-arrow {
     border-bottom-width: 20px;
     border-left-width: 20px;
