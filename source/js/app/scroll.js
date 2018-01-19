@@ -79,7 +79,7 @@
       }
 
       if (currentWidth < tabletWidth) {
-        scrollValueComparator(scrollTop, 50, 1200, 2300, 3000);
+        scrollValueComparator(scrollTop, 50, 1200, 2700, 3200);
       }
 
       if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
