@@ -73,7 +73,7 @@ gulp.task("js-clean", function () {
 
 gulp.task("js-compress", ["js-clean"], function(cb) {
   pump([
-    gulp.src("source/js/app/*.js"),
+    gulp.src("source/js/*.js"),
     babel({
       presets: ['env']
     }),
@@ -112,7 +112,7 @@ gulp.task("serve", ["sass", "html", "js-compress"], function() {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["sass"]);
   gulp.watch("source/*.html", ["html"]);
-  gulp.watch("!source/js/app/*.min.js", ["js-compress"]);
+  gulp.watch("source/js/*.js", ["js-compress"]);
   gulp.watch("source/js/libs/*.js", ["libs-js"]);
 });
 

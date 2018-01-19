@@ -83,11 +83,11 @@
       }
 
       if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-        scrollValueComparator(scrollTop, 100, 1050, 2450, 2880);
+        scrollValueComparator(scrollTop, 100, 1050, 2600, 3200);
       }
 
       if (currentWidth >= desktopWidth) {
-        scrollValueComparator(scrollTop, 500, 1200, 1800, 2300);
+        scrollValueComparator(scrollTop, 500, 1200, 2250, 2800);
       }
     })
   })
