@@ -1662,9 +1662,8 @@ a {
           align-items: center;
   width: 100%;
   padding: 25px 20px;
-  background-image: url("../img/badge-pocket.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   opacity: 0;
   -webkit-transform: translateY(40px);
           transform: translateY(40px); }
@@ -1707,11 +1706,11 @@ a {
 
 .about-me__title {
   font-size: 27px;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 40px; }
 
 .about-me__list {
-  font-size: 12px;
+  font-size: 17px;
   line-height: 26px;
   list-style: none;
   padding-left: 0;
@@ -1740,7 +1739,7 @@ a {
     transition: 0.5s; }
 
 .about-me__button {
-  width: 100%;
+  width: 180px;
   margin-top: 30px; }
 
 .about-me__barcode {
@@ -1771,7 +1770,12 @@ a {
     height: 425px;
     padding: 25px;
     border-radius: 5px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-image: url("../img/badge-pocket.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
   .about-me__lanyard {
     display: block;
     top: -327px; }
