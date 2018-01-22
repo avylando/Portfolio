@@ -27,6 +27,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "gulp-webp": "^2.3.0",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.1.0",
@@ -34,7 +35,8 @@
     "run-sequence": "^2.2.0",
     "stylelint": "8.1.x",
     "stylelint-config-htmlacademy": "^0.1.0",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "vinyl-ftp": "^0.6.0"
   },
   "editorconfig-cli": [
     "*.html",
