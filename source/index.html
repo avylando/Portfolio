@@ -362,14 +362,14 @@
                       <img class="portfolio__tool-icon" src="img/ajax-logo.png" width="130" height="130" alt="AJAX">
                     </a>
                   </div>
-                  <div class="portfolio__tool" title="Wordpress">
-                    <a class="portfolio__tool-link" href="https://ru.wordpress.org/" target="_blank">
-                      <img class="portfolio__tool-icon" src="img/wp-logo.png" width="130" height="130">
-                    </a>
-                  </div>
                   <div class="portfolio__tool" title="PHP">
                     <a class="portfolio__tool-link" href="https://ru.wikipedia.org/wiki/PHP" target="_blank">
                       <img class="portfolio__tool-icon" src="img/php-logo.png" width="130" height="130">
+                    </a>
+                  </div>
+                  <div class="portfolio__tool" title="MySQL">
+                    <a class="portfolio__tool-link" href="https://ru.wikipedia.org/wiki/MySQL" target="_blank">
+                      <img class="portfolio__tool-icon" src="img/mysql-logo.png" width="130" height="130">
                     </a>
                   </div>
                   <div class="portfolio__tool" title="GitHub">
@@ -398,13 +398,18 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://avylando.github.io/Keksobooking/" target="_blank">
+                    <a href="https://keksobooking.anatoly-dolgov.ru/" target="_blank">
                       <img src="img/keksobooking-preview.jpg" data-large-src="img/keksobooking-preview.jpg">
                     </a>
                   </li>
                   <li>
-                    <a href="https://avylando.github.io/Kekstagram/" target="_blank">
+                    <a href="http://kekstagram.anatoly-dolgov.ru/" target="_blank">
                       <img src="img/kekstagram-preview.jpg" data-large-src="img/kekstagram-preview.jpg">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://yeticave.anatoly-dolgov.ru/" target="_blank">
+                      <img src="img/yeticave-preview.jpg" data-large-src="img/yeticave-preview.jpg">
                     </a>
                   </li>
                 </ul>
@@ -423,6 +428,9 @@
                   </li>
                   <li class="portfolio__slide" tabindex="0">
                     <img src="img/kekstagram-preview_mini.jpg" alt="Kekstagram-mini">
+                  </li>
+                  <li class="portfolio__slide">
+                    <img src="img/yeticave-preview_mini.jpg" alt="Yeticave-mini">
                   </li>
                 </ul>
               </div>
@@ -570,11 +578,11 @@
 
         <div class="feedback__button-block">
           <div class="feedback__field feedback__field--agree">
-            <input class="feedback__agree-input" type="checkbox" name="agree-personal-data" id="agree" checked="">
+            <input class="feedback__agree-input" type="checkbox" name="agree-personal-data" id="agree">
             <label class="feedback__agree-label" for="agree">Нажимая на кнопку "Отправить", я даю своё согласие на обработку персональных данных</label>
           </div>
 
-          <button class="feedback__button button" type="submit">Отправить</button>
+          <button class="feedback__button button" type="submit" disabled="">Отправить</button>
           <p class="feedback__note">
             <span class="feedback__note-star">*</span> — обязательные
             <span class="feedback__note-plus"> для заполнения</span> поля
