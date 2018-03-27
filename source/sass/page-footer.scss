@@ -52,7 +52,11 @@
 .page-footer__social-item {
   display: inline-block;
 
-  &--instagram {
+  &--telegram {
+    margin-left: 40px;
+  }
+
+  &--instagram{
     margin-left: 40px;
     margin-right: 40px;
   }
